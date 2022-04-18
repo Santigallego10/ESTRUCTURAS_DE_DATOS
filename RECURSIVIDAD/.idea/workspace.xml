@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bec901f5-4846-4d99-90bc-e9ed659e3bfb" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="27NyiwToUwH05NXQaW3Khw7ZcSs" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/co/edu/cue/ejercicios/Excercise8" />
+      <recent name="$PROJECT_DIR$/src/co/edu/cue/ejercicios/Excercise6" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main11">
+    <configuration name="Main10" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="co.edu.cue.ejercicios.Excercise10.Main10" />
+      <module name="RECURSI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="co.edu.cue.ejercicios.Excercise10.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main11" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="co.edu.cue.ejercicios.Excercise11.Main11" />
+      <module name="RECURSI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="co.edu.cue.ejercicios.Excercise11.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main7" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="co.edu.cue.ejercicios.Excercise7.Main7" />
+      <module name="RECURSI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="co.edu.cue.ejercicios.Excercise7.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main8" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="co.edu.cue.ejercicios.Excercise8.Main8" />
+      <module name="RECURSI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="co.edu.cue.ejercicios.Excercise8.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main9" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="co.edu.cue.ejercicios.Excercise9.Main9" />
+      <module name="RECURSI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="co.edu.cue.ejercicios.Excercise9.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main11" />
+        <item itemvalue="Application.Main9" />
+        <item itemvalue="Application.Main10" />
+        <item itemvalue="Application.Main8" />
+        <item itemvalue="Application.Main7" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bec901f5-4846-4d99-90bc-e9ed659e3bfb" name="Changes" comment="" />
+      <created>1649174968645</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1649174968645</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/co/edu/cue/ejercicios/Excercise1/Exercise1.java</url>
+          <line>8</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/co/edu/cue/ejercicios/Excercise2/Exercise2.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/co/edu/cue/ejercicios/Excercise11/Excercise11.java</url>
+          <line>6</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/co/edu/cue/ejercicios/Excercise11/Excercise11.java</url>
+          <line>7</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/co/edu/cue/ejercicios/Excercise11/Excercise11.java</url>
+          <line>8</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/co/edu/cue/ejercicios/Excercise11/Excercise11.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/co/edu/cue/ejercicios/Excercise11/Excercise11.java</url>
+          <line>10</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/co/edu/cue/ejercicios/Excercise11/Excercise11.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/co/edu/cue/ejercicios/Excercise11/Excercise11.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/co/edu/cue/ejercicios/Excercise11/Excercise11.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/co/edu/cue/ejercicios/Excercise11/Excercise11.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/co/edu/cue/ejercicios/Excercise11/Excercise11.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/co/edu/cue/ejercicios/Excercise11/Excercise11.java</url>
+          <line>5</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
