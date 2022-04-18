@@ -9,6 +9,11 @@ public class House {
 
     }
 
+    public House(int number, type houseType) {
+        this.number = number;
+        this.houseType = houseType;
+    }
+
     public int getNumber() {
         return number;
     }
@@ -23,5 +28,13 @@ public class House {
 
     public void setHouseType(type houseType) {
         this.houseType = houseType;
+    }
+
+    @Override
+    public String toString() {
+        return "House{" +
+                "number=" + number +
+                ", houseType=" + houseType +
+                '}';
     }
 }
