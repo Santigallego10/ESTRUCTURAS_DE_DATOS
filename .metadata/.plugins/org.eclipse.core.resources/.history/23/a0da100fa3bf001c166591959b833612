@@ -1,0 +1,31 @@
+package co.edu.cue.ed.tablaHash.app;
+
+import java.util.Hashtable;
+
+import co.edu.cue.ed.tablaHash.model.MusicExercise1;
+
+public class MainExercise1Activity {
+
+	public static void main(String[] args) {
+
+		Hashtable<Integer, MusicExercise1> table1= new Hashtable<Integer, MusicExercise1>();
+		
+		MusicExercise1 m1= new MusicExercise1("MAMI","Urbano Latino", "Karol G, Becky G", 2022, 04, "MAMIII");
+		MusicExercise1 m2= new MusicExercise1("Tacones Rojos","Urbano latino, Pop", " John Legend, Sebastián Yatra", 2022, 03, "Tacones Rojos");
+		MusicExercise1 m3= new MusicExercise1("12x3","Urbano Latino", "Dekko", 2021, 12, "12x3");
+		MusicExercise1 m4= new MusicExercise1("Fuera del Mercado","Urbano Latino", "Danny Ocean", 2022, 02, "@dannocean");
+		
+		table1.put(01, m1);
+		table1.put(02, m2);
+		table1.put(03, m3);
+		table1.put(04, m4);
+		
+		
+		System.out.println("Size of the hash table: "+ table1.size());
+		
+		
+		
+		
+	}
+
+}

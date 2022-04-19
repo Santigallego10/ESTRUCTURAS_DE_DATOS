@@ -1,0 +1,19 @@
+package co.edu.cue.ed.tablaHash.app;
+
+import java.util.Hashtable;
+import java.util.Map;
+
+public class MainPrincipalBookEjm3 {
+
+	public static void main(String[] args) {
+
+		Map<Integer, Book> map = new Hashtable<Integer, Book>();
+		
+		Book b1=new Book(101, name, autor, publisher, quantity);
+		Book b2=new Book(102, name, autor, publisher, quantity);
+		Book b3=new Book(103, name, autor, publisher, quantity);
+	
+	
+	}
+
+}

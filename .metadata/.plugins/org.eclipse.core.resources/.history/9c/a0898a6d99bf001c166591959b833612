@@ -1,0 +1,13 @@
+package co.edu.cue.ed.tablaHash.model;
+
+public class MusicExercise1 {
+
+	private String gender;
+	private String singer;
+	private int yearPublic;
+	private int mesPublic;
+	private String album;
+	
+	
+	
+}
