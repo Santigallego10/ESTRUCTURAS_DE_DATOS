@@ -6,7 +6,7 @@ public class TestHashTable {
 
         public static void main(String[] args){
             WorkHash table = new WorkHash(2);
-            String key,value;
+            String key= null,value;
             while (true) {
                 System.out.println("\n Menu:");
                 System.out.println("   1. test put(key,value)");
@@ -23,33 +23,36 @@ public class TestHashTable {
                 Scanner scannerA = new Scanner(System.in);
 
                 switch ( TextIO) {
-                    case 1:
+                    case "1":
                         System.out.print("\n   Key = ");
-                        key = TextIO.getln();
+                        String Text = scannerA.next();
                         System.out.print("   Value = ");
-                        value = TextIO.getln();
+                        value = Text;
                         table.put(key,value);
                         break;
-                    case 2:
-                        System.out.print("\n   Key = ");
-                        key = TextIO.getln();
+                    case "2":
+                        String Text2 = scannerA.next();
+                        System.out.print("\n   Key = " +Text2);
+                        key = Text2;
                         System.out.println("   Value is " + table.get(key));
                         break;
-                    case 3:
+                    case "3":
+                        String Text3 = scannerA.next();
                         System.out.print("\n   Key = ");
-                        key = TextIO.getln();
+                        key = Text3;
                         System.out.println("   containsKey(" + key + ") is "
                                 + table.containsKey(key));
                         break;
-                    case 4:
+                    case "4":
+                        String Text4 = scannerA.next();
                         System.out.print("\n   Key = ");
-                        key = TextIO.getln();
+                        key = Text4;
                         table.remove(key);
                         break;
-                    case 5:
+                    case "5":
                         table.dump();
                         break;
-                    case 6:
+                    case "6":
                         return;  // End program by returning from main()
                     default:
                         System.out.println("   Illegal command.");
@@ -60,4 +63,4 @@ public class TestHashTable {
         }
 
     }
-}
+
