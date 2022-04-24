@@ -1,0 +1,10 @@
+package co.edu.cue.ed.matrizDispersa.app;
+
+public class MainNode {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

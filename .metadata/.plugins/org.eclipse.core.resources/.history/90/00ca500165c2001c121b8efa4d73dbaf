@@ -1,0 +1,20 @@
+package co.edu.cue.ed.matrizDispersa.app;
+
+import co.edu.cue.ed.matrizDispersa.model.Node;
+
+public class MainNode {
+
+	public static void main(String[] args) {
+
+		int sparseMatrix[][]={
+				{0,0,1,2},
+				{3,0,0,0},
+				{0,4,5,6},
+				{0,6,0,0}
+		};
+		
+		Node start=null;
+		Node tail=null;
+	}
+
+}

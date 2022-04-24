@@ -50,8 +50,8 @@ public class MainExercise1Activity {
 		System.out.println("\n");
 		
 		//add new objects
-		table1.put(05, m3);
-		table1.put(03, m1);
+		table1.put(5, m3);
+		table1.put(3, m1);
 		
 		//replace
 		MusicExercise1 newM= new MusicExercise1("Permission to dance", "Kpop, Pop", "BTS", 2021, 07, " Permission to Dance (R&B Remix)");
@@ -80,7 +80,7 @@ public class MainExercise1Activity {
 		//METODOS EJERCICIO 2
 		
 		//CLONE()
-		table1.remove(03);
+		table1.remove(3);
 		Hashtable<Integer, MusicExercise1> tableClone=(Hashtable<Integer, MusicExercise1>) table1.clone();
 		System.out.println("The cloned table look like this: ");
 		for (Map.Entry<Integer, MusicExercise1> entry : tableClone.entrySet()) {
@@ -136,7 +136,7 @@ public class MainExercise1Activity {
 				Entry<Integer, MusicExercise1> itr123=itrEntry.next();
 				System.out.println(itr123.getKey()+" = "+itr123.getValue().getName());
 			} 
-		
+			System.out.println("\n");
 			
 			//COMPUTE
 			MusicExercise1 newValue= new MusicExercise1("Del mar", "Urbano latino", " Ozuna, Sia", 2020, 10, "ENOC");

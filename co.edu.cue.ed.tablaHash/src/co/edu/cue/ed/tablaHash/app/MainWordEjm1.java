@@ -20,5 +20,5 @@ public class MainWordEjm1 {
 		System.out.println(table.get(word));
 		System.out.println(word.getName());
 	}
-
+	
 }

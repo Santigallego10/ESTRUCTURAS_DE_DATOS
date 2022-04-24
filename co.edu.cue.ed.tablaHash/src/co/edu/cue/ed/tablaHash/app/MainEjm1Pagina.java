@@ -6,7 +6,6 @@ public class MainEjm1Pagina {
 
 	public static void main(String[] args) {
 
-		
 		Hashtable<Integer, String> ht= new Hashtable<Integer, String>();
 		
 		//mostrar si la tabla esta vacia

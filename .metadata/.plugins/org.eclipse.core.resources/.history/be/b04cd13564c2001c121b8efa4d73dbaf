@@ -1,0 +1,5 @@
+package co.edu.cue.ed.matrizDispersa.model;
+
+public class Node {
+
+}

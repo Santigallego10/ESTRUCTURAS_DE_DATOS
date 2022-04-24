@@ -1,0 +1,15 @@
+package co.edu.cue.ed.matrizDispersa.app;
+
+public class Dispersa1 {
+
+	public static void main(String[] args) {
+
+		int array[][]= {{1,0,3},{0,0,4},{6,0,0}};
+		
+		int m=3;
+		int n=3;
+		int counter= 0;
+	
+	}
+
+}
