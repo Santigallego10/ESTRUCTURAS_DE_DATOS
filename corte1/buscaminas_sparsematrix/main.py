@@ -1,12 +1,13 @@
 import numpy as np
 import os
+import time
 from scipy.sparse import csr_matrix
 
 
 def create_mines_map(matrix):
     mines_map = []
     for row in matrix:
-        mines_map.append(['#' for _ in row])
+        mines_map.append(['*' for _ in row])
     return np.array(mines_map)
 
 
@@ -39,7 +40,7 @@ def run():
     flag = False
 
     while not flag:
-        clear()
+        #clear()
         print_matrix(mines_map)
 
         row = int(input('Numero de la fila a seleccionar: '))
@@ -47,16 +48,18 @@ def run():
 
         if (row, column) in steps:
             print('Ya pasaste por aquí, elige otra casilla')
+            time.sleep(2.0)
         else:
             try:
                 if matrix[row, column] in sparse_matrix.data:
                     print('Pisaste una mina!!\nGAME OVER')
                     flag = True
                 else:
-                    mines_map[row, column] = '*'
+                    mines_map[row, column] = '#'
                     steps.append((row, column))
             except IndexError:
                 print('Coordenada no existente, intenta con otra')
+                time.sleep(2.0)
 
 
 if __name__ == '__main__':
