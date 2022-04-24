@@ -40,7 +40,7 @@ def run():
     flag = False
 
     while not flag:
-        #clear()
+        clear()
         print_matrix(mines_map)
 
         row = int(input('Numero de la fila a seleccionar: '))
