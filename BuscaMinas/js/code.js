@@ -22,7 +22,7 @@ function createBoard() {
     for (let i = 0; i < row; i++) {
         stringHTML += '<tr>'
         for (let j = 0; j < col; j++) {
-            stringHTML += `<td id="celda-${j}-${i}"  style="width:${boxSize}px;height${boxSize}px">`
+            stringHTML += `<td id="celda-${j}-${i}" style="width:${boxSize}px;height:${boxSize}px">`
             stringHTML += `</td>`
         }
         stringHTML += `</tr>`
@@ -71,24 +71,31 @@ function minesCounter() {
     }
 }
 
-function checkMines(celda, i, j, em) {
+function checkMines(celda, i, j, em, cont) {
     if (backBoard[j][i].value == 1) {
         celda.innerHTML = "X"
-        alert("Perdiooooo");
+        alert("Perdiooooo, Su puntaje fue de: " + cont);
+        startGame();
+    } else {
+        celda.style.backgroundColor = "pink";
     }
 }
 
 function refreshBoard() {
+    let cont = 0;
     for (let i = 0; i < row; i++) {
         for (let j = 0; j < col; j++) {
             let celda = document.getElementById(`celda-${j}-${i}`)
 
+            /*
             if (backBoard[j][i].value == 1) {
                 celda.innerHTML = "M";
             }
+            */
 
             celda.addEventListener("click", me => {
-                checkMines(celda, i, j, me);
+                checkMines(celda, i, j, me, cont);
+                cont++;
             })
         }
     }

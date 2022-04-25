@@ -3,6 +3,11 @@
     box-sizing: border-box;
 }
 
+h1 {
+    margin: 0 auto;
+    text-align: center;
+}
+
 body {
     background-color: gray;
     font-family: monospace;
