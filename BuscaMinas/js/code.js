@@ -2,6 +2,7 @@ let row = 15;
 let col = 15;
 let boxSize = 30;
 let mines = row * col * 0.2; //20% de minas
+let sound = new Audio("../Sounds/cuack.mp3");
 
 let backBoard = [];
 
@@ -87,6 +88,7 @@ function refreshBoard() {
             */
 
             celda.addEventListener("click", me => {
+                sound.play();
                 if (backBoard[j][i].value == 1) {
                     if (lifeCont == 0) {
                         celda.innerHTML = "X"
