@@ -1,7 +1,7 @@
-let row = 20;
-let col = 20;
+let row = 15;
+let col = 15;
 let boxSize = 30;
-let mines = row * col * 0.1; //20% de minas
+let mines = row * col * 0.2; //20% de minas
 
 let backBoard = [];
 
@@ -71,18 +71,15 @@ function minesCounter() {
     }
 }
 
-function checkMines(celda, i, j, em, cont) {
-    if (backBoard[j][i].value == 1) {
-        celda.innerHTML = "X"
-        alert("Perdiooooo, Su puntaje fue de: " + cont);
-        startGame();
-    } else {
-        celda.style.backgroundColor = "pink";
-    }
+function checkMines(celda, i, j, em, cont, lifeCont) {
+
 }
 
 function refreshBoard() {
     let cont = 0;
+    let lifeCont = 3;
+    let points = document.getElementById("points");
+    let lifes = document.getElementById("lifes")
     for (let i = 0; i < row; i++) {
         for (let j = 0; j < col; j++) {
             let celda = document.getElementById(`celda-${j}-${i}`)
@@ -94,8 +91,21 @@ function refreshBoard() {
             */
 
             celda.addEventListener("click", me => {
-                checkMines(celda, i, j, me, cont);
-                cont++;
+                if (backBoard[j][i].value == 1) {
+                    if (lifeCont == 0) {
+                        celda.innerHTML = "X"
+                        alert("Perdiooooo, Su puntaje fue de: " + cont);
+                        startGame();
+                    } else {
+                        lifeCont--;
+                        lifes.innerHTML = "Vidas: " + lifeCont;
+                    }
+                } else {
+                    cont++;
+                    points.innerHTML = "Puntos: " + cont;
+                    celda.style.backgroundColor = "pink";
+                }
+
             })
         }
     }
