@@ -71,10 +71,6 @@ function minesCounter() {
     }
 }
 
-function checkMines(celda, i, j, em, cont, lifeCont) {
-
-}
-
 function refreshBoard() {
     let cont = 0;
     let lifeCont = 3;
@@ -97,6 +93,7 @@ function refreshBoard() {
                         alert("Perdiooooo, Su puntaje fue de: " + cont);
                         startGame();
                     } else {
+                        celda.style.backgroundColor = "red";
                         lifeCont--;
                         lifes.innerHTML = "Vidas: " + lifeCont;
                     }
