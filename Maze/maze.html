@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Maze Game in JavaScript</title>
+    <style type="text/css">
+        #board td {
+            width: 25pt;
+            height: 25pt;
+            color: rgb(146, 12, 34);
+            text-align: center;
+        }
+        
+        #board td.start {
+            font-size: 8pt;
+            font-weight: bold;
+            border-left: 2px rgb(0, 0, 0) solid;
+            background: rgb(164, 241, 241);
+            border-top: 2px black solid;
+            text-align: center;
+            color: red;
+        }
+        
+        #board td.end {
+            font-size: 8pt;
+            font-weight: bold;
+            text-align: center;
+            color: rgb(73, 24, 250);
+        }
+        
+        #message {
+            margin: 0pt;
+            padding: 0pt;
+            text-align: center;
+        }
+    </style>
+    <script type="text/javascript">
+        var maze = new Array();
+        var sides = new Array("Border-Top", "Border-Right");
+        for (var rows = 0; rows < 13; rows++) {
+            maze[rows] = new Array();
+        }
+        maze[0][0] = new Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
+        maze[0][1] = new Array(0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1);
+        maze[1][0] = new Array(1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1);
+        maze[1][1] = new Array(0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1);
+        maze[2][0] = new Array(1, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1, 1);
+        maze[2][1] = new Array(0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1);
+        maze[3][0] = new Array(0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1);
+        maze[3][1] = new Array(1, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1);
+        maze[4][0] = new Array(0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1);
+        maze[4][1] = new Array(1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1);
+        maze[5][0] = new Array(0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0);
+        maze[5][1] = new Array(1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1);
+        maze[6][0] = new Array(0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1);
+        maze[6][1] = new Array(1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1);
+        maze[7][0] = new Array(1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1);
+        maze[7][1] = new Array(1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1);
+        maze[8][0] = new Array(0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0);
+        maze[8][1] = new Array(0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1);
+        maze[9][0] = new Array(0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1);
+        maze[9][1] = new Array(1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1);
+        maze[10][0] = new Array(0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0);
+        maze[10][1] = new Array(1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1);
+        maze[11][0] = new Array(0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0);
+        maze[11][1] = new Array(1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1);
+        maze[12][0] = new Array(0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0);
+        maze[12][1] = new Array(1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1);
+
+        function tryNext(nxt) {
+            if ((board.rows[start.rows].cells[start.cols].style.backgroundColor == "pink") && (nxt.style.backgroundColor ==
+                    'pink')) {
+                message.innerText = "I see you changed your mind.";
+                board.rows[start.rows].cells[start.cols].style.backgroundColor = "";
+                return false;
+            }
+            return true;
+        }
+
+        function moveIt() {
+            if (progress) {
+                switch (event.keyCode) {
+                    case 37: // Left
+                        if (maze[start.rows][1][start.cols - 1] == 0) {
+                            if (tryNext(board.rows[start.rows].cells[start.cols - 1]))
+                                message.innerText = "Going west...";
+                            start.cols--;
+                            document.all.board.rows[start.rows].cells[start.cols].style.backgroundColor = "pink";
+                        } else {
+                            message.innerText = "you´re going trough the wrong site";
+                        }
+                        break;
+                    case 38: // Up
+                        if (maze[start.rows][0][start.cols] == 0) {
+                            if (tryNext(board.rows[start.rows - 1].cells[start.cols]))
+                                message.innerText = "Going north...";
+                            start.rows--;
+                            document.all.board.rows[start.rows].cells[start.cols].style.backgroundColor = "pink";
+                        } else {
+                            message.innerText = "Ouch... you can't go north.";
+                        }
+                        break;
+                    case 39: // Right
+                        if (maze[start.rows][1][start.cols] == 0) {
+                            if (tryNext(board.rows[start.rows].cells[start.cols + 1]))
+                                message.innerText = "Going east...";
+                            start.cols++;
+                            document.all.board.rows[start.rows].cells[start.cols].style.backgroundColor = "pink";
+                        } else {
+                            message.innerText = "Ouch... you can't go east."
+                        }
+                        break;
+                    case 40: // Down
+                        if (maze[start.rows + 1] == null) return;
+                        if (maze[start.rows + 1][0][start.cols] == 0) {
+                            if (tryNext(board.rows[start.rows + 1].cells[start.cols]))
+                                message.innerText = "Going south...";
+                            start.rows++;
+                            document.all.board.rows[start.rows].cells[start.cols].style.backgroundColor = "pink";
+                        } else {
+                            message.innerText = "Ouch... you can't go south.";
+                        }
+                        break;
+                }
+                if (document.all.board.rows[start.rows].cells[start.cols].innerText == "End") {
+                    message.innerText = "You Win the Game!";
+                    progress = false;
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <p align=center style="font-weight: lighter; font-size:30px;">Use →, ←, ↑ and ↓ Keys to Play the Game</p>
+    <table id='board' align='center' cellspacing=0 cellpadding=0>
+        <script type="text/javascript">
+            for (var row = 0; row < maze.length; row++) {
+                document.write("<tr>");
+                for (var col = 0; col < maze[row][0].length; col++) {
+                    document.write("<td style='");
+                    for (var cell = 0; cell < 2; cell++) {
+                        if (maze[row][cell][col] == 1)
+                            document.write(sides[cell] + ": 2px black solid;");
+                    }
+                    if ((0 == col) && (0 != row))
+                        document.write("border-left: 2px black solid;");
+                    if (row == maze.length - 1)
+                        document.write("border-bottom: 2px black solid;");
+                    if ((0 == row) && (0 == col))
+                        document.write(" background-color:pink;' class=start>Let's play</td>");
+                    else {
+                        if ((row == maze.length - 1) && (col == maze[row][0].length - 1))
+                            document.write("' class=end>End</td>");
+                        else
+                            document.write("'></td>");
+                    }
+                }
+                document.write("</tr>");
+            }
+
+            var start = new Object();
+            start.rows = 0;
+            start.cols = 0;
+            progress = true;
+            document.onkeydown = moveIt;
+        </script>
+    </table>
+    <p id="message" style="margin-top: 20px; font-size: 15px; color:blueviolet; font-weight: bold;"></p>
+</body>
+
+</html>
