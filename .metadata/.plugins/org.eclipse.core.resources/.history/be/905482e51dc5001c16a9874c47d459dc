@@ -1,0 +1,10 @@
+package co.edu.cue.ed.exposicionArrayList;
+
+public class MainArrayList2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

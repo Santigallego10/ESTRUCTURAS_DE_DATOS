@@ -1,5 +1,6 @@
-INDEX VERSION 1.129+C:\td\ws_class\cursos-java\ws_estructurasdedatos\ESTRUCTURAS_DE_DATOS\.metadata\.plugins\org.eclipse.jdt.core
-3308005571.index
+INDEX VERSION 1.129+C:\td\ws_class\ws_estructurasdedatos\ESTRUCTURAS_DE_DATOS\.metadata\.plugins\org.eclipse.jdt.core
 1774135650.index
-1842680587.index
 3956239808.index
+1323881363.index
+1842680587.index
+3308005571.index

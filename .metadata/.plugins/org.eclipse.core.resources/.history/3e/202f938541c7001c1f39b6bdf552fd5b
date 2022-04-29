@@ -1,0 +1,26 @@
+package co.edu.cue.ed.exposicionArrayList;
+
+public class MainAlejaDosMasDosEsTres {
+
+	public static void main(String[] args) {
+
+		
+		int dos= 1;
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		System.out.println(2+dos);
+	}
+
+}

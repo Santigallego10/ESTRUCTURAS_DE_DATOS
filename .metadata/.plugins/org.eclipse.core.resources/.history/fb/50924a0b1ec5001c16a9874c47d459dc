@@ -1,0 +1,57 @@
+package co.edu.cue.ed.exposicionArrayList;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class MainArrayList2 {
+
+	public static void main(String[] args) {
+		 //creamos el ArrayList que contendrá la altura de los alumnos
+	      ArrayList<Double> altura = new ArrayList();
+	      int N;
+	      double media;
+	      //obtenemos el número de alumnos de la clase
+	      N = numeroAlumnos();
+	      //leemos la altura de los N alumnos
+	      leerAlturas(altura, N);
+	      //calculamos la media
+	      media = calcularMedia(altura);
+	      //mostramos los resultados
+	      mostrarResultados(altura, media);
+	}
+	//Método para pedir por teclado el número de alumnos de la clase
+	   public static int numeroAlumnos() {
+	      Scanner sc = new Scanner(System.in);
+	      int n;
+	      do {
+	            System.out.print("Introduce número de alumnos: ");
+	            n = sc.nextInt();
+	      } while (n < 1);
+	      return n;
+	   }
+
+	 //Este método recibe el ArrayList y el número de alumnos de la clase
+	   //Pide por teclado la altura de todos los alumnos y las guarda en el ArrayList
+	   public static void leerAlturas(ArrayList<Double> a, int n) {
+	      Scanner sc = new Scanner(System.in);
+	      int i;
+	      double alto;
+	      for (i = 1; i <= n; i++) {
+	           do {
+	                 System.out.print("Alumno " + i + " altura: ");
+	                 alto = sc.nextDouble();
+	           } while (alto <= 0);
+	           a.add(alto); //añade la altura al final del ArrayList
+	      }
+	  }
+	   
+	 //Este método recibe el ArrayList con todas las alturas
+	   //calcula y devuelve la media
+	   public static double calcularMedia(ArrayList<Double> a) {
+	      double media = 0;
+	      for (Double d : a) {
+	            media = media + d;
+	      }
+	      return media / a.size();
+	   }
+}

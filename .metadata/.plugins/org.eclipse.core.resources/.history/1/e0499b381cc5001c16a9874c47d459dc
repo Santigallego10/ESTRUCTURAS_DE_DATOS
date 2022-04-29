@@ -1,0 +1,44 @@
+package co.edu.cue.ed.exposicionArrayList;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class MainArrayList {
+
+	public static void main(String[] args) {
+		
+		// Declaración de un ArrayList de "String". Puede ser de cualquier otro Elemento u Objeto (float, Boolean, Object, ...)
+		List<String> nombreArrayList = new ArrayList<String>();
+		// Añade el elemento al ArrayList
+		nombreArrayList.add("Elemento");
+		nombreArrayList.add("Elemento 1");
+		nombreArrayList.add("Elemento 2");
+		nombreArrayList.add("Elemento");
+		// Añade el elemento al ArrayList en la posición 'n'
+		int n=4;
+		nombreArrayList.add(n, "Elemento 4");
+		// Devuelve el numero de elementos del ArrayList
+		System.out.println("Tamaño: "+nombreArrayList.size());
+		// Devuelve el elemento que esta en la posición '1' del ArrayList
+		System.out.println("Elemento en posicion 1: "+nombreArrayList.get(1));
+		// Comprueba se existe del elemento ('Elemento') que se le pasa como parametro
+		System.out.println("Arreglo contiene Elemento? -- "+nombreArrayList.contains("Elemento"));
+		// Devuelve la posición de la primera ocurrencia ('Elemento') en el ArrayList  
+		System.out.println("Posicion primera vez que aparece Elemento: "+nombreArrayList.indexOf("Elemento"));
+		// Devuelve la posición de la última ocurrencia ('Elemento') en el ArrayList   
+		System.out.println("Posicion ultima vez que aparece Elemento:"+nombreArrayList.lastIndexOf("Elemento"));
+		// Borra el elemento de la posición '1' del ArrayList   
+		System.out.println("elemento borrado: "+nombreArrayList.remove(1)); 
+		// Borra la primera ocurrencia del 'Elemento' que se le pasa como parametro.  
+		System.out.println("Borra primer valor llamado Elemento"+nombreArrayList.remove("Elemento"));
+		//Borra todos los elementos de ArrayList   
+		nombreArrayList.clear();
+		// Devuelve True si el ArrayList esta vacio. Sino Devuelve False   
+		System.out.println("La lista esta vacia? -- "+nombreArrayList.isEmpty());  
+		// Copiar un ArrayList 
+		ArrayList arrayListCopia = (ArrayList) ((ArrayList) nombreArrayList).clone();  
+		// Pasa el ArrayList a un Array 
+		Object[] array = nombreArrayList.toArray(); 
+	}
+
+}

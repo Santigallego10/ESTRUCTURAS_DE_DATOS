@@ -1,9 +1,0 @@
-package co.edu.cue.ed.tablaHash.app;
-
-public class Book {
-
-	private int id;
-	private String name;
-	private Sring autor;
-	
-}

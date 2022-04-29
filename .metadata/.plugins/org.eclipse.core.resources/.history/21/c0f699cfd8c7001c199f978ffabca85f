@@ -1,0 +1,10 @@
+package co.edu.cue.ed.List;
+
+public class MainAlejaDosMasDosEsTres {
+
+	public static void main(String[] args) {
+		int dos= 1;
+		System.out.println(2+dos);
+	}
+
+}
