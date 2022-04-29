@@ -5,6 +5,7 @@
 		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\td\ws_class\ws_estructurasdedatos\ESTRUCTURAS_DE_DATOS\co.edu.cue.ed.collections"/>
 			<item value="C:\td\ws_class\cursos-java\ws_estructurasdedatos\ESTRUCTURAS_DE_DATOS\co.edu.cue.ed.recursividad"/>
 			<item value="C:\td\ws_class\cursos-java\ws_estructurasdedatos\ESTRUCTURAS_DE_DATOS\co.edu.cue.ed.digiturno"/>
 		</list>
