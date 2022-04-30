@@ -6,10 +6,12 @@ import java.util.Set;
 public class Auction {
     private Product product;
     private int offersAmount = 0;
+    private double price;
     private Set<User> users = new HashSet<>();
 
     public Auction(Product product) {
         this.product = product;
+        this.price = product.getInitialPrice();
     }
 
     public Product getProduct() {
@@ -26,6 +28,14 @@ public class Auction {
 
     public void setOffersAmount(int offersAmount) {
         this.offersAmount = offersAmount;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 
     public Set<User> getUsers() {
