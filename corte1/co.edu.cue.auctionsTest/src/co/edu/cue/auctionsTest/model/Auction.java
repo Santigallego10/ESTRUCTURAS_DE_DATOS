@@ -45,4 +45,14 @@ public class Auction {
     public void setUsers(Set<User> users) {
         this.users = users;
     }
+
+    @Override
+    public String toString() {
+        return "Auction{" +
+                "product=" + product +
+                ", offersAmount=" + offersAmount +
+                ", price=" + price +
+                ", users=" + users +
+                '}';
+    }
 }
