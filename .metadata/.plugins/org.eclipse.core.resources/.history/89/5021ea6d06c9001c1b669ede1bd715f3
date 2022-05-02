@@ -1,0 +1,22 @@
+package co.edu.cue.ed.slideshowCollection.app;
+
+import java.util.Set;
+import java.util.TreeSet;
+
+public class MainTreeSetOrdenamiento {
+
+	public static void main(String[] args) {
+		
+		Set<Integer> ts= new TreeSet<>((a,b)->b.compareTo(a));
+		ts.add("Rosa");
+		ts.add("Juan");
+		ts.add("Luisa");
+		ts.add("Natalia");
+		ts.add("Ana");
+		ts.add("Rosa");
+		
+		
+		
+	}
+
+}

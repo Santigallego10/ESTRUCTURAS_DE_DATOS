@@ -1,0 +1,9 @@
+package co.edu.cue.ed.auction.model;
+
+public class Product {
+
+	
+	private String name;
+	private String codigo;
+	
+}

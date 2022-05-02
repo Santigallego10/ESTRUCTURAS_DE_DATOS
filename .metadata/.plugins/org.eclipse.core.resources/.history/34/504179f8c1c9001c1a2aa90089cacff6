@@ -1,0 +1,14 @@
+package co.edu.cue.ed.auction.model;
+
+import java.sql.Date;
+import java.util.ArrayList;
+import java.util.Hashtable;
+
+public class Auction {
+
+	private Product product;
+	private ArrayList<User> users;
+	private Date date;
+	
+	
+}

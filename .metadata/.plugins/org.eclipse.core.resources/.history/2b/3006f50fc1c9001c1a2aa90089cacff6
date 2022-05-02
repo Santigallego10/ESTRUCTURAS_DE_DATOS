@@ -1,0 +1,7 @@
+package co.edu.cue.ed.auction.model;
+
+public class User {
+
+	private String nombre;
+	
+}

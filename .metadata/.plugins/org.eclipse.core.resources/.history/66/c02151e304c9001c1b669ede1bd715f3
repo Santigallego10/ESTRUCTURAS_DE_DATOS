@@ -1,0 +1,16 @@
+package co.edu.cue.ed.slideshowCollection.app;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class MainDeteccionDuplicados {
+
+	public static void main(String[] args) {
+
+		String [] nombres= {"Arle", "Santiago", "Santiago", "Maria", "Teresa"};
+		Set<String> unicos= new HashSet<>();
+	
+	
+	}
+
+}

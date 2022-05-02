@@ -1,0 +1,9 @@
+package co.edu.cue.ed.auction.model;
+
+public class User {
+
+	private String name;
+	private String id;
+	private String mail;
+	private String number;
+}

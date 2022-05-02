@@ -1,0 +1,49 @@
+package co.edu.cue.ed.auction.model;
+
+public class Product {
+
+	
+	private String name;
+	private String codigo;
+	private float price;
+	
+	
+	public Product() {
+
+	}
+	
+	
+	public Product(String name, String codigo, double price) {
+		super();
+		this.name = name;
+		this.codigo = codigo;
+		this.price = price;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getCodigo() {
+		return codigo;
+	}
+	public void setCodigo(String codigo) {
+		this.codigo = codigo;
+	}
+	public double getPrice() {
+		return price;
+	}
+	public void setPrice(double price) {
+		this.price = price;
+	}
+	@Override
+	public String toString() {
+		return "Product [name=" + name + ", codigo=" + codigo + ", price=" + price + "]";
+	}
+	
+	
+	
+	
+	
+}

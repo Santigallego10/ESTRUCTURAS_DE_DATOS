@@ -1,0 +1,23 @@
+package co.edu.cue.ed.slideshowCollection.app;
+
+import java.util.Set;
+import java.util.TreeSet;
+
+import co.edu.cue.ed.slideshowCollection.model.Publicacion;
+
+public class MainPublicacion {
+
+	public static void main(String[] args) {
+		
+		Set<Publicacion> publi = new TreeSet<>();
+		publi.add(new Publicacion("Gafas", "", 0));
+		publi.add(new Publicacion("Reloj", "", 0));
+		publi.add(new Publicacion("Aretes", "", 0));
+		publi.add(new Publicacion("Bicicleta", "", 0));
+		publi.add(new Publicacion("Zapatos", "", 0));
+		publi.add(new Publicacion("Camisa", "", 0));
+		
+		System.out.println(publi);
+	}
+
+}
