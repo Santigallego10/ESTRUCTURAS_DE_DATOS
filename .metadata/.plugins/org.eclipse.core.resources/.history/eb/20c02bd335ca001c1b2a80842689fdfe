@@ -111,10 +111,15 @@ public class PrincipalAuction {
 	public Auction createAuction(){
 		Auction auction= null;
 		
+		
 		List<User> userList2= new ArrayList<User>();
 		
-		User user= verifyUser(JOptionPane.showInputDialog("Enter the id for user "));
-		userList2.add(user);
+		int option=Integer.parseInt(JOptionPane.showInputDialog("Ingrese la cantidad de usuarios: "));
+		
+		for (int i = 0; i < option; i++) {
+			User user= verifyUser(JOptionPane.showInputDialog("Enter the id for user "+(i+1)));
+			userList2.add(user);
+		}
 		
 		Product product= verifyProduct(JOptionPane.showInputDialog("Enter the code"));
 		
@@ -128,6 +133,7 @@ public class PrincipalAuction {
 			auction.setUsers(userList2);
 			getAuctionList().add(auction);
 			
+			//cuadrar q solo agregue los usuarios que se ingresen o busquen
 		}
 		return auction;
 		

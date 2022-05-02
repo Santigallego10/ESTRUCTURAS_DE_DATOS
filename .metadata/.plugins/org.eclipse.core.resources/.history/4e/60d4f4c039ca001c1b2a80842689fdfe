@@ -116,6 +116,7 @@ public class PrincipalAuction {
 		User user= verifyUser(JOptionPane.showInputDialog("Enter the id for user "));
 		userList2.add(user);
 		
+		
 		Product product= verifyProduct(JOptionPane.showInputDialog("Enter the code"));
 		
 		if (userList2.size()==0 && product==null) {
@@ -125,7 +126,7 @@ public class PrincipalAuction {
 			LocalDateTime time= LocalDateTime.now();
 			auction.setDate(time);
 			auction.setProduct(productsList.get(1));
-			auction.setUsers(userList2);
+			//auction.setUsers(userList2);
 			getAuctionList().add(auction);
 			
 		}
