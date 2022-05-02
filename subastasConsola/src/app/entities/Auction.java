@@ -65,6 +65,8 @@ public class Auction {
         this.offers = offers;
     }
 
+
+
     @Override
     public String toString() {
         return "Auction{" +

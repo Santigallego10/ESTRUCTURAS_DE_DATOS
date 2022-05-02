@@ -13,12 +13,12 @@ public class Main {
     public static void main(String[] args) {
         List<User> users = new ArrayList<>();
         List<Product> products = new ArrayList<>();
+        List<Auction> auctions = new ArrayList<>();
         products = createProducts();
         users = createUsers();
         boolean flag = true;
         String[] options = {"Exit", "Create auction", "Auctions List"};
         while (flag){
-
             //main page
             int x = JOptionPane.showOptionDialog(null, "Select an option:",
                     "Click on the option",
@@ -30,10 +30,11 @@ public class Main {
                     System.out.println("Exit");
                     break;
                 case 1:
-                    createAuction(users, products);
+                    auctions = createAuction(users, products, auctions);
                     System.out.println("Create");
                     break;
                 case 2:
+                    listAuction(auctions, users);
                     System.out.println("List");
                     break;
                 default:
@@ -61,7 +62,10 @@ public class Main {
     public static List<User> createUsers() {
         List<User> users = new ArrayList<>();
         User user1 = new User("Santiago","Gallego","sgallego1022@cue.edu.co","SantiG","1234");
+        User user2 = new User("Maria","Hurtado","sgallego1022@cue.edu.co","MariH","1234");
+
         users.add(user1);
+        users.add(user2);
         return users;
     }
 
@@ -82,7 +86,7 @@ public class Main {
 
     //AUCTION METHODS
 
-    private static void createAuction(List<User> users, List<Product> products) {
+    private static List<Auction> createAuction(List<User> users, List<Product> products, List<Auction> auctions) {
         Product auctionProduct = null;
         User user = logIn(users);
         int cont = 1;
@@ -93,8 +97,12 @@ public class Main {
         }
         String x = JOptionPane.showInputDialog("Write the name of the product you want to sell: "+"\n"+productList);
         for (Product p: products) {
+            System.out.println(p);
+
             if(p.getProductName().equalsIgnoreCase(x)){
+                System.out.println(p);
                 auctionProduct = p;
+                System.out.println(p);
             }
         }
         Auction auction = new Auction();
@@ -105,10 +113,47 @@ public class Main {
         auction.setStartPrice(price);
         auction.setProduct(auctionProduct);
 
-        JOptionPane.showMessageDialog(null,"Your auction has been created successfully with the next details: \n" +
-                auction.toString());
+        System.out.println(auction.toString());
+        auctions.add(auction);
+
+        JOptionPane.showMessageDialog(null,"Your auction has been created successfully with the next details: \n");
+
+        return auctions;
+    }
+
+    private static void listAuction(List<Auction> auctions, List<User> users) {
+        String[] options = {"Exit", "Put offer"};
+        String auctionList = "AUCTIONS LIST: \n";
+        int cont = 1;
+        for (Auction auction: auctions) {
+            auctionList += cont+". "+auction.getProduct().getProductName() + " published by: "+auction.getSeller().getUsername() +"\n";
+        }
+        int x = JOptionPane.showOptionDialog(null, "Select an option:",
+                "Click on the option",
+                JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, options, options[0]);
+        System.out.println(x);
+        switch (x){
+            case 1:
+                System.out.println("put offer");
+                putOffer(auctions, users);
+                break;
+            default:
+                System.out.println("x");
+        }
+    }
+
+    private static void putOffer(List<Auction> auctions, List<User> users) {
+        JOptionPane.showMessageDialog(null, "Identify yourself: ");
+        User findedUser = logIn(users);
+        JOptionPane.showMessageDialog(null, "Find the auction you are interested on: ");
+        User findedSeller = logIn(users);
+
+        findedSeller.getUserAuctions().get(0).getOffers().add(findedUser);
+
+        System.out.println(findedSeller.getUserAuctions().get(0).getOffers());
 
     }
+
 
     private static String getTime() {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
