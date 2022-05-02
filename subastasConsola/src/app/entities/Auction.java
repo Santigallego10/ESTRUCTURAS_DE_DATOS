@@ -6,10 +6,8 @@ import java.util.Set;
 
 public class Auction {
 
-    private int id;
     private User seller;
-    private Date creationDay;
-    private Date finishingDay;
+    private String creationDay;
     private Boolean closed;
     private double startPrice;
     private Product product;
@@ -18,13 +16,22 @@ public class Auction {
     public Auction(){
     }
 
-    public int getId() {
-        return id;
+    public double getStartPrice() {
+        return startPrice;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setStartPrice(double startPrice) {
+        this.startPrice = startPrice;
     }
+
+    public Product getProduct() {
+        return product;
+    }
+
+    public void setProduct(Product product) {
+        this.product = product;
+    }
+
 
     public User getSeller() {
         return seller;
@@ -34,20 +41,12 @@ public class Auction {
         this.seller = seller;
     }
 
-    public Date getCreationDay() {
+    public String getCreationDay() {
         return creationDay;
     }
 
-    public void setCreationDay(Date creationDay) {
+    public void setCreationDay(String creationDay) {
         this.creationDay = creationDay;
-    }
-
-    public Date getFinishingDay() {
-        return finishingDay;
-    }
-
-    public void setFinishingDay(Date finishingDay) {
-        this.finishingDay = finishingDay;
     }
 
     public Boolean getClosed() {
@@ -64,5 +63,16 @@ public class Auction {
 
     public void setOffers(Set<User> offers) {
         this.offers = offers;
+    }
+
+    @Override
+    public String toString() {
+        return "Auction{" +
+                "seller=" + seller.getUsername() +
+                ", creationDay='" + creationDay + '\'' +
+                ", closed=" + closed +
+                ", startPrice=" + startPrice +
+                ", product=" + product.getProductName() +
+                '}';
     }
 }
