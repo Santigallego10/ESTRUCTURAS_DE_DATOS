@@ -17,7 +17,8 @@ public class MainTurn {
 					+ " \n 2. Show users"
 					+ " \n 3. Show counter of students and teachers"
 					+ " \n 4. Show ticket"
-					+ " \n 5. OUT"
+					+ " \n 5. Change the module"
+					+ " \n 6. OUT"
 					));
 			
 			switch (option) {
@@ -31,11 +32,18 @@ public class MainTurn {
 				turn.showCounters();
 				break;
 			case 4:
+				int numberModule=Integer.parseInt(JOptionPane.showInputDialog("Enter the module: "));
+				turn.showTicket(numberModule);
+				break;
+			case 5:
+				turn.changeTurn();
+				break;
+			case 6:
 				break;
 			default:
 				break;
 			}
-		} while (option!=5);
+		} while (option!=6);
 			
 		}
 	

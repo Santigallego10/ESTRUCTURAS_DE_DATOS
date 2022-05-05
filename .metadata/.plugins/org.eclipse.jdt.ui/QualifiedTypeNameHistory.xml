@@ -42,14 +42,16 @@
 <fullyQualifiedTypeName name="co.edu.cue.ed.parcial1.model4.TipoSegmento"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="java.util.Map"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.rmi.server.UID"/>
 <fullyQualifiedTypeName name="javax.swing.text.Segment"/>
 <fullyQualifiedTypeName name="javafx.print.PrinterJob.JobStatus"/>
 <fullyQualifiedTypeName name="co.edu.cue.ed.parcial1.model4.SegmentType"/>
-<fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
-<fullyQualifiedTypeName name="co.edu.cue.ed.parcial1.model4.User"/>
 <fullyQualifiedTypeName name="co.edu.cue.ed.parcial1.model4.Terminal"/>
 <fullyQualifiedTypeName name="co.edu.cue.ed.parcial1.model4.Turn"/>
+<fullyQualifiedTypeName name="java.util.TreeMap"/>
+<fullyQualifiedTypeName name="java.lang.Math"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="co.edu.cue.ed.parcial1.model4.User"/>
+<fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
 </qualifiedTypeNameHistroy>

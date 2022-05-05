@@ -15,6 +15,8 @@ public class HashTable2 {
 		paises.put("FR", "Francia");
 		paises.replace("ES", "Escocia");
 		
+		//System.out.println(paises.toString());
+		
 		
 		Enumeration e=paises.elements();
 		while (e.hasMoreElements()) {
