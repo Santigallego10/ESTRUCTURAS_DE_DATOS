@@ -1,6 +1,7 @@
 package app.application;
 
 import app.entities.Auction;
+import app.entities.AuctionsWeb;
 import app.entities.Product;
 import app.entities.User;
 
@@ -11,11 +12,12 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        List<User> users = new ArrayList<>();
-        List<Product> products = new ArrayList<>();
-        List<Auction> auctions = new ArrayList<>();
-        products = createProducts();
-        users = createUsers();
+
+        AuctionsWeb auctionsWeb = new AuctionsWeb();
+
+        auctionsWeb.getUsers().addAll(createUsers());
+        auctionsWeb.getProducts().addAll(createProducts());
+
         boolean flag = true;
         String[] options = {"Exit", "Create auction", "Auctions List"};
         while (flag){
@@ -30,11 +32,11 @@ public class Main {
                     System.out.println("Exit");
                     break;
                 case 1:
-                    auctions = createAuction(users, products, auctions);
+                    auctionsWeb = createAuction(auctionsWeb);
                     System.out.println("Create");
                     break;
                 case 2:
-                    listAuction(auctions, users);
+                    listAuction(auctionsWeb);
                     System.out.println("List");
                     break;
                 default:
@@ -53,7 +55,10 @@ public class Main {
         products.add(product);
         products.add(product2);
         products.add(product3);
+
+
         return products;
+
     }
 
 
@@ -86,9 +91,10 @@ public class Main {
 
     //AUCTION METHODS
 
-    private static List<Auction> createAuction(List<User> users, List<Product> products, List<Auction> auctions) {
+    private static AuctionsWeb createAuction(AuctionsWeb auctionsWeb) {
+        List<Product> products = auctionsWeb.getProducts();
         Product auctionProduct = null;
-        User user = logIn(users);
+        User user = logIn(auctionsWeb.getUsers());
         int cont = 1;
         String productList = "PRODUCT LIST: \n";
         for (Product i: products) {
@@ -114,14 +120,16 @@ public class Main {
         auction.setProduct(auctionProduct);
 
         System.out.println(auction.toString());
-        auctions.add(auction);
+        auctionsWeb.getAuctions().add(auction);
 
-        JOptionPane.showMessageDialog(null,"Your auction has been created successfully with the next details: \n");
+        JOptionPane.showMessageDialog(null,"Your auction has been created successfully\n");
 
-        return auctions;
+        return auctionsWeb;
     }
 
-    private static void listAuction(List<Auction> auctions, List<User> users) {
+    private static AuctionsWeb listAuction(AuctionsWeb auctionsWeb) {
+        List<Auction> auctions = auctionsWeb.getAuctions();
+        List<User> users = auctionsWeb.getUsers();
         String[] options = {"Exit", "Put offer"};
         String auctionList = "AUCTIONS LIST: \n";
         int cont = 1;
@@ -135,23 +143,31 @@ public class Main {
         switch (x){
             case 1:
                 System.out.println("put offer");
-                putOffer(auctions, users);
+                auctionsWeb = putOffer(auctionsWeb);
                 break;
             default:
                 System.out.println("x");
         }
+
+        return auctionsWeb;
     }
 
-    private static void putOffer(List<Auction> auctions, List<User> users) {
+    private static AuctionsWeb putOffer(AuctionsWeb auctionsWeb) {
         JOptionPane.showMessageDialog(null, "Identify yourself: ");
-        User findedUser = logIn(users);
+        User findedUser = logIn(auctionsWeb.getUsers());
         JOptionPane.showMessageDialog(null, "Find the auction you are interested on: ");
-        User findedSeller = logIn(users);
+        User findedSeller = logIn(auctionsWeb.getUsers());
+
+        System.out.println(findedSeller.getUsername());
+
+        System.out.println(findedSeller.getUserAuctions());
 
         findedSeller.getUserAuctions().get(0).getOffers().add(findedUser);
 
+        System.out.println("prueba funcionalidad");
         System.out.println(findedSeller.getUserAuctions().get(0).getOffers());
 
+        return auctionsWeb;
     }
 
 
