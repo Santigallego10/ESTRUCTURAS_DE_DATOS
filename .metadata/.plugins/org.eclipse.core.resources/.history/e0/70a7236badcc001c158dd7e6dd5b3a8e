@@ -1,0 +1,89 @@
+package co.edu.cue.ed.parcial1.model4;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.swing.JOptionPane;
+
+public class Turn {
+
+	private Map<Integer,String> moduleList= new HashMap<Integer, String>();
+	private static List<User> usersList= new ArrayList<User>();
+	
+	
+	public Turn(){
+		this.createUsers();
+	}
+	
+	
+	public void createUsers(){
+
+	
+		
+		User user= new User();
+		user.setId(JOptionPane.showInputDialog("Enter the id for user"));
+		user.setName(JOptionPane.showInputDialog("Enter the name for user"));
+		int type=Integer.parseInt(JOptionPane.showInputDialog("Enter the option for the menu: "
+				+ " \n 1. Student"
+				+ " \n 2. Teacher"
+				));
+		verifySegmentType(type, user);
+		usersList.add(user);
+	}
+
+	public void verifySegmentType(int type,User user){
+		int counterStudents=0;
+		int counterTeachers=0;
+		
+			if (type==1) {
+				user.setSegmentType(SegmentType.STUDENT);
+				counterStudents=counterStudents+1;
+			} else if (type==2) {
+				user.setSegmentType(SegmentType.TEACHER);
+				counterTeachers= counterTeachers+1;
+			} else {
+				JOptionPane.showMessageDialog(null, "This segment type doesn't exist");
+			}
+	}
+	
+	public void showUsers(){
+		for (User user : usersList) {
+			System.out.println(user.toString());
+		}
+	}
+	
+	
+	public Turn(Map<Integer, String> moduleList, List<User> usersList) {
+		super();
+		this.moduleList = moduleList;
+		Turn.usersList = usersList;
+	}
+	
+	
+	
+	public Map<Integer, String> getModuleList() {
+		return moduleList;
+	}
+	public void setModuleList(Map<Integer, String> moduleList) {
+		this.moduleList = moduleList;
+	}
+	public List getUsersList() {
+		return usersList;
+	}
+	public void setUsersList(List usersList) {
+		this.usersList = usersList;
+	}
+
+	@Override
+	public String toString() {
+		return "Turn [moduleList=" + moduleList + ", usersList=" + usersList + "]";
+	}
+	
+	
+	
+	
+	
+	
+}

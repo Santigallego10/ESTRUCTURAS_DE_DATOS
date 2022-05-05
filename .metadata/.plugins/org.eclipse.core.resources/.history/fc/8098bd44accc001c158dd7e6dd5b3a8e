@@ -1,0 +1,82 @@
+package co.edu.cue.ed.parcial1.model4;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.swing.JOptionPane;
+
+public class Turn {
+
+	private Map<Integer,String> moduleList= new HashMap<Integer, String>();
+	private static List usersList= new ArrayList<User>();
+	
+	
+	public static void createUsers(){
+
+		User user= new User();
+		user.setId(JOptionPane.showInputDialog("Enter the id"));
+		user.setName(JOptionPane.showInputDialog("Enter the name"));
+		int type=Integer.parseInt(JOptionPane.showInputDialog("Enter the option for the menu: "
+				+ " \n 1. Student"
+				+ " \n 2. Teacher"
+				));
+		verifySegmentType(type, user);
+		usersList.add(user);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public Turn(){
+		
+	}
+	
+	public Turn(Map<Integer, String> moduleList, List usersList) {
+		super();
+		this.moduleList = moduleList;
+		this.usersList = usersList;
+	}
+	
+	
+	
+	public Map<Integer, String> getModuleList() {
+		return moduleList;
+	}
+	public void setModuleList(Map<Integer, String> moduleList) {
+		this.moduleList = moduleList;
+	}
+	public List getUsersList() {
+		return usersList;
+	}
+	public void setUsersList(List usersList) {
+		this.usersList = usersList;
+	}
+
+	@Override
+	public String toString() {
+		return "Turn [moduleList=" + moduleList + ", usersList=" + usersList + "]";
+	}
+	
+	
+	
+	
+	
+	
+}
