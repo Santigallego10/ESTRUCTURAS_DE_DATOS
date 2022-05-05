@@ -2,7 +2,6 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="co.edu.cue.ed.tablaHash.model.WordEjm1"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
-<fullyQualifiedTypeName name="java.util.Map"/>
 <fullyQualifiedTypeName name="co.edu.cue.ed.tablaHash.app.HashTable1Ejm2"/>
 <fullyQualifiedTypeName name="co.edu.cue.ed.tablaHash.app.Book"/>
 <fullyQualifiedTypeName name="java.util.Map.Entry"/>
@@ -29,15 +28,28 @@
 <fullyQualifiedTypeName name="java.util.Collection"/>
 <fullyQualifiedTypeName name="java.util.Collections"/>
 <fullyQualifiedTypeName name="java.sql.Date"/>
-<fullyQualifiedTypeName name="java.util.Hashtable"/>
-<fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="co.edu.cue.ed.auction.model.User"/>
 <fullyQualifiedTypeName name="java.security.Principal"/>
 <fullyQualifiedTypeName name="co.edu.cue.ed.auction.model.PrincipalAuction"/>
-<fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
 <fullyQualifiedTypeName name="co.edu.cue.ed.auction.model.Product"/>
 <fullyQualifiedTypeName name="co.edu.cue.ed.auction.model.Auction"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
+<fullyQualifiedTypeName name="co.edu.cue.ed.parcial1.MainNumeroTriangulares"/>
+<fullyQualifiedTypeName name="co.edu.cue.ed.parcial1.app.HashTable2"/>
+<fullyQualifiedTypeName name="java.util.Hashtable"/>
+<fullyQualifiedTypeName name="java.util.Enumeration"/>
+<fullyQualifiedTypeName name="co.edu.cue.ed.parcial1.model4.TipoSegmento"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.rmi.server.UID"/>
+<fullyQualifiedTypeName name="javax.swing.text.Segment"/>
+<fullyQualifiedTypeName name="javafx.print.PrinterJob.JobStatus"/>
+<fullyQualifiedTypeName name="co.edu.cue.ed.parcial1.model4.SegmentType"/>
+<fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+<fullyQualifiedTypeName name="co.edu.cue.ed.parcial1.model4.User"/>
+<fullyQualifiedTypeName name="co.edu.cue.ed.parcial1.model4.Terminal"/>
+<fullyQualifiedTypeName name="co.edu.cue.ed.parcial1.model4.Turn"/>
 </qualifiedTypeNameHistroy>

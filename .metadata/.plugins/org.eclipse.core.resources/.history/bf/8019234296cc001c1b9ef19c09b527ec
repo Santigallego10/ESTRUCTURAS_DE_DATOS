@@ -1,0 +1,16 @@
+package co.edu.cue.ed.parcial1.model4;
+
+public class User {
+
+	private SegmentType segmentType;
+	private String name;
+	private String id;
+	
+	
+	public User() {
+		
+	}
+	
+	
+	
+}

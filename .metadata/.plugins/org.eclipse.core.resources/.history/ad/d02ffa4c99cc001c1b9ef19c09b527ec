@@ -1,0 +1,102 @@
+package co.edu.cue.ed.parcial1.app4;
+
+import java.rmi.server.UID;
+
+import javax.swing.JOptionPane;
+import javax.swing.text.Segment;
+import co.edu.cue.ed.parcial1.model4.SegmentType;
+import co.edu.cue.ed.parcial1.model4.Terminal;
+import co.edu.cue.ed.parcial1.model4.Turn;
+import co.edu.cue.ed.parcial1.model4.User;
+import javafx.print.PrinterJob.JobStatus;
+
+public class MainTurn {
+
+	public static void main(String[] args) {
+		
+		int option;	
+		Terminal terminal= new Terminal();
+		
+		do {
+			option=Integer.parseInt(JOptionPane.showInputDialog("Enter the option for the menu: "
+					+ " \n 1. Create user"
+					+ " \n 2. Create Teacher"
+					+ " \n 3. OUT"
+					));
+			
+			switch (option) {
+			case 1:
+				terminal.createUsers();
+				break;
+			case 2:
+				String identification=JOptionPane.showInputDialog("Hi, Enter the identification ");
+				Client client=turno.searchClientIdentification(identification);
+				System.out.println(client);
+				
+//				String identification=JOptionPane.showInputDialog("Hi, Enter the identification ");
+//				Client client=turno.searchClientIdentificationRecursive(identification,0);
+//				System.out.println(client);
+				break;
+			case 3:
+				break;
+			default:
+				break;
+			}
+		} while (option!=4);
+			
+		}
+		
+		createUsers();
+		int counterTeacher=0;
+		
+		
+	
+	}
+	
+	
+	
+	public static void createUsers(){
+		int counterStudents=0;
+		
+		while () {
+			
+		}
+		
+		
+		
+		
+		
+		
+		User user= new User();
+		user.setId(JOptionPane.showInputDialog("Enter the id"));
+		user.setName(JOptionPane.showInputDialog("Enter the name"));
+		int type=Integer.parseInt(JOptionPane.showInputDialog("Enter the option for the menu: "
+				+ " \n 1. Student"
+				+ " \n 2. Teacher"
+				));
+		verifySegmentType(type, user);
+		counterStudents=counterStudents+1;
+		
+		user= new User();
+		user.setId(JOptionPane.showInputDialog("Enter the id"));
+		user.setName(JOptionPane.showInputDialog("Enter the name"));
+		int type2=Integer.parseInt(JOptionPane.showInputDialog("Enter the option for the menu: "
+				+ " \n 1. Student"
+				+ " \n 2. Teacher"
+				));
+		verifySegmentType(type2, user);
+		counterStudents=counterStudents+1;
+	}
+	
+	public static void verifySegmentType(int type,User user){
+		
+		if (type==1) {
+			user.setSegmentType(SegmentType.STUDENT);
+		} else if (type==2) {
+			user.setSegmentType(SegmentType.TEACHER);
+		} else {
+			JOptionPane.showMessageDialog(null, "This segment type doesn't exist");
+		}
+	}
+
+}

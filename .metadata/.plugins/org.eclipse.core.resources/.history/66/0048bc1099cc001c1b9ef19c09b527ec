@@ -1,0 +1,5 @@
+package co.edu.cue.ed.digiturno.model;
+
+public class Terminal {
+
+}

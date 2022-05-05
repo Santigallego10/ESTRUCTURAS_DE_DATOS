@@ -1,0 +1,9 @@
+package co.edu.cue.ed.digiturno.model;
+
+import co.edu.cue.ed.parcial1.model4.Turn;
+
+public class Terminal {
+
+	Turn turn= new Turn();
+	
+}

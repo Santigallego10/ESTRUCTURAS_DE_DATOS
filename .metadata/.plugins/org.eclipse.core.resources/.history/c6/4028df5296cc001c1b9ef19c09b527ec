@@ -1,0 +1,25 @@
+package co.edu.cue.ed.parcial1.model4;
+
+public class User {
+
+	private SegmentType segmentType;
+	private String name;
+	private String id;
+	
+	
+	public User() {
+		
+	}
+
+
+	public User(SegmentType segmentType, String name, String id) {
+		super();
+		this.segmentType = segmentType;
+		this.name = name;
+		this.id = id;
+	}
+	
+	
+	
+	
+}

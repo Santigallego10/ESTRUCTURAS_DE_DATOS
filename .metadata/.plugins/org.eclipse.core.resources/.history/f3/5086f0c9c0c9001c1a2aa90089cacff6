@@ -1,7 +1,0 @@
-package co.edu.cue.ed.auction.model;
-
-public class Auction {
-
-	private Product product;
-	
-}

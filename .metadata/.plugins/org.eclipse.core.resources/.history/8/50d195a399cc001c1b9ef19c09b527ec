@@ -1,0 +1,33 @@
+package co.edu.cue.ed.parcial1.model4;
+
+import javax.swing.JOptionPane;
+
+public class Terminal {
+
+	Turn turn= new Turn();
+	
+	
+	public static void createUsers(){
+		int counterStudents=0;
+			
+		User user= new User();
+		user.setId(JOptionPane.showInputDialog("Enter the id"));
+		user.setName(JOptionPane.showInputDialog("Enter the name"));
+		int type=Integer.parseInt(JOptionPane.showInputDialog("Enter the option for the menu: "
+				+ " \n 1. Student"
+				+ " \n 2. Teacher"
+				));
+		verifySegmentType(type, user);
+		counterStudents=counterStudents+1;
+		
+		user= new User();
+		user.setId(JOptionPane.showInputDialog("Enter the id"));
+		user.setName(JOptionPane.showInputDialog("Enter the name"));
+		int type2=Integer.parseInt(JOptionPane.showInputDialog("Enter the option for the menu: "
+				+ " \n 1. Student"
+				+ " \n 2. Teacher"
+				));
+		verifySegmentType(type2, user);
+		counterStudents=counterStudents+1;
+	}	
+}

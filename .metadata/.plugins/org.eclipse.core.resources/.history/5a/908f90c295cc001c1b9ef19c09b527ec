@@ -1,0 +1,11 @@
+package co.edu.cue.ed.parcial1.model4;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class Turn {
+
+	private Map<Integer,String> listaModulos= new HashMap<Integer, String>();
+	private List 
+}

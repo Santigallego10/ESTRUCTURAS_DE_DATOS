@@ -1,0 +1,10 @@
+package co.edu.cue.ed.parcial1.app;
+
+public class HashTable2 {
+
+	public static void main(String[] args) {
+
+		
+	}
+
+}

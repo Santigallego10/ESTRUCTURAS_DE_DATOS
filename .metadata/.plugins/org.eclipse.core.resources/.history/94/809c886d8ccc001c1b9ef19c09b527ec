@@ -1,0 +1,12 @@
+package co.edu.cue.ed.parcial1.app;
+
+import java.util.Hashtable;
+
+public class HashTable2 {
+
+	public static void main(String[] args) {
+
+		Hashtable paises= new Hashtable();
+	}
+
+}

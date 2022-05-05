@@ -1,0 +1,7 @@
+package co.edu.cue.ed.parcial1.model4;
+
+public class Usuario {
+
+	private SegmentType segmentType;
+	private no
+}
