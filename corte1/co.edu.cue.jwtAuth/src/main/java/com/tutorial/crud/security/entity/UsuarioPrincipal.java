@@ -10,23 +10,11 @@ import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Entity
 public class UsuarioPrincipal implements UserDetails {
-    @NotNull
     private String nombre;
-    @NotNull
-    @Column(unique=true)
     private String nombreUsuario;
-    @NotNull
     private String email;
-    @NotNull
     private String password;
-    @NotNull
-    @ManyToMany
-    @JoinTable(name="usuario_rol",
-            joinColumns=@JoinColumn(name="usuario_id"),
-            inverseJoinColumns=@JoinColumn(name="rol_id")
-    )
     private Collection<? extends GrantedAuthority> authorities;
 
     public UsuarioPrincipal(String nombre, String nombreUsuario, String email, String password, Collection<? extends GrantedAuthority> authorities) {

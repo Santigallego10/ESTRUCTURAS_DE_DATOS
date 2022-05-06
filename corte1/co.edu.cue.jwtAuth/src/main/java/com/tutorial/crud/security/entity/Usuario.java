@@ -10,15 +10,20 @@ public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
     @NotNull
     private String nombre;
+
     @NotNull
     @Column(unique=true)
     private String nombreUsuario;
+
     @NotNull
     private String email;
+
     @NotNull
     private String password;
+
     @NotNull
     @ManyToMany
     @JoinTable(name="usuario_rol",
