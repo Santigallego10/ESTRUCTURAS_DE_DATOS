@@ -11,19 +11,15 @@ public class MainNumeroTriangulares {
 		
 	}
 	
-	
-	
-	public static Integer numeroTriangulares(int n){
-		imprimirAsteriscos(n);
+	public static Integer numeroTriangulares(int i, int n){
 		if (n==1) {
 			System.out.println("*");
 			return 1;
 		} else {
-			return n+numeroTriangulares(n-1);
+			imprimirAsteriscos(n);
+			return n+numeroTriangulares(i+1,n-1);
 		}
 	}
-	//while
-	
 	
 	public static void imprimirAsteriscos(int n){
 		
@@ -32,6 +28,8 @@ public class MainNumeroTriangulares {
 		}
 		System.out.println("");
 	}
+	
+	
 	
 	
 }

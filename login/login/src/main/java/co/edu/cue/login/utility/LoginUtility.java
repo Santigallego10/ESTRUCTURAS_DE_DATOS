@@ -19,17 +19,17 @@ public class LoginUtility implements Serializable {
 
     private static final long serialVersionUID = 234234523523L;
 
-    public static final long JWT_TOKEN_VALIDITY = 5 * 60 * 60;
+    public static final long JWT_TOKEN_VALIDITY = 5 * 60 * 60; //18000
 
     @Value("${jwt.secret}")
     private String secretKey;
 
-    //retrieve username from jwt token
+    //recuperar el nombre de usuario del token jwt
     public String getUsernameFromToken(String token) {
         return getClaimFromToken(token, Claims::getSubject);
     }
 
-    //retrieve expiration date from jwt token
+    //recuperar la fecha de vencimiento del token jwt
     public Date getExpirationDateFromToken(String token) {
         return getClaimFromToken(token, Claims::getExpiration);
     }
@@ -41,29 +41,29 @@ public class LoginUtility implements Serializable {
     }
 
 
-    //for retrieving any information from token we will need the secret key
+    //para recuperar cualquier información del token, necesitaremos la clave secreta
     private Claims getAllClaimsFromToken(String token) {
         return Jwts.parser().setSigningKey(secretKey).parseClaimsJws(token).getBody();
     }
 
 
-    //check if the token has expired
+    //comprobar si el token ha caducado
     private Boolean isTokenExpired(String token) {
         final Date expiration = getExpirationDateFromToken(token);
         return expiration.before(new Date());
     }
 
 
-    //generate token for user
+    //Generar token para el usuario
     public String generateToken(UserDetails userDetails) {
         Map<String, Object> claims = new HashMap<>();
         return doGenerateToken(claims, userDetails.getUsername());
     }
 
 
-    //while creating the token -
-    //1. Define  claims of the token, like Issuer, Expiration, Subject, and the ID
-    //2. Sign the JWT using the HS512 algorithm and secret key.
+    //mientras crea el token-
+    //1. Definir reclamos del token, como Emisor, Vencimiento, Asunto y la ID
+    //2. Firme el JWT utilizando el algoritmo HS512 y la clave secreta.
     private String doGenerateToken(Map<String, Object> claims, String subject) {
         return Jwts.builder().setClaims(claims).setSubject(subject).setIssuedAt(new Date(System.currentTimeMillis()))
                 .setExpiration(new Date(System.currentTimeMillis() + JWT_TOKEN_VALIDITY * 1000))
@@ -71,7 +71,7 @@ public class LoginUtility implements Serializable {
     }
 
 
-    //validate token
+    //valida el token
     public Boolean validateToken(String token, UserDetails userDetails) {
         final String username = getUsernameFromToken(token);
         return (username.equals(userDetails.getUsername()) && !isTokenExpired(token));

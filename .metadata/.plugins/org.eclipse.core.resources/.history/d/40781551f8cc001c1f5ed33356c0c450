@@ -11,27 +11,25 @@ public class MainNumeroTriangulares {
 		
 	}
 	
-	
-	
-	public static Integer numeroTriangulares(int n){
+	public static Integer numeroTriangulares(int i, int n){
 		if (n==1) {
 			System.out.println("*");
 			return 1;
 		} else {
-			imprimirAsteriscos(n);
+			imprimirAsteriscos(i+1,n);
 			return n+numeroTriangulares(n-1);
 		}
 	}
-	//while
 	
-	
-	public static void imprimirAsteriscos(int n){
+	public static void imprimirAsteriscos(int desde,int n){
 		
-		for (int i = 0; i <= n; i++) {
+		for (int i = 1; i <= n; i++) {
 			System.out.print("*");
 		}
 		System.out.println("");
 	}
+	
+	
 	
 	
 }

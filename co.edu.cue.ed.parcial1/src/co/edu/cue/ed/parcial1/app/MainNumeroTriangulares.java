@@ -7,23 +7,22 @@ public class MainNumeroTriangulares {
 	public static void main(String[] args) {
 
 		int numero= Integer.parseInt(JOptionPane.showInputDialog("Ingrese el numero de veces"));
-		numeroTriangulares(numero);
+		numeroTriangulares(1,numero);
 		
 	}
 	
-	public static Integer numeroTriangulares(int n){
+	public static Integer numeroTriangulares(int j, int n){
 		if (n==1) {
-			System.out.println("*");
+			imprimirAsteriscos(j);
 			return 1;
 		} else {
-			imprimirAsteriscos(n);
-			return n+numeroTriangulares(n-1);
+			imprimirAsteriscos(j);
+			return n+numeroTriangulares(j+1,n-1);
 		}
 	}
 	
-	public static void imprimirAsteriscos(int n){
-		
-		for (int i = 1; i <= n; i++) {
+	public static void imprimirAsteriscos(int j){
+		for (int i = 1; i <= j; i++) {
 			System.out.print("*");
 		}
 		System.out.println("");
