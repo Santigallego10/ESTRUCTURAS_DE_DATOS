@@ -15,7 +15,7 @@ public class University {
         initializeUsers();
     }
 
-    public void asignTurn() {
+    public void assignTurn() {
         String id = stringInput("Numero de cedula: ");
         User user = findUser(id);
 
@@ -43,33 +43,94 @@ public class University {
             case 1:
                 cubiculo1.add(user);
                 System.out.println("Cubículo 1\nCédula: " +user.getId()+ "\nSegmento: "+user.getSegment());
-
-                if (user.getSegment().equals("Estudiante")) studentsSegment++;
-                else teachersSegment++;
+                checkSegment(user);
                 break;
             case 2:
                 cubiculo2.add(user);
                 System.out.println("Cubículo 2\nCédula: " +user.getId()+ "\nSegmento: "+user.getSegment());
-
-                if (user.getSegment().equals("Estudiante")) studentsSegment++;
-                else teachersSegment++;
+                checkSegment(user);
                 break;
             case 3:
                 cubiculo3.add(user);
                 System.out.println("Cubículo 3\nCédula: " +user.getId()+ "\nSegmento: "+user.getSegment());
-
-                if (user.getSegment().equals("Estudiante")) studentsSegment++;
-                else teachersSegment++;
+                checkSegment(user);
                 break;
         }
     }
 
+    public void checkSegment(User user) {
+        if (user.getSegment().equals("Estudiante")) studentsSegment++;
+        else teachersSegment++;
+    }
+
     public void getStats() {
         int usersAmount = cubiculo1.size()+cubiculo2.size()+cubiculo3.size();
-
         System.out.println("Hasta el momento se han atendido: " +usersAmount+ " usuarios" +
                 "\nEstudiantes: " +studentsSegment+
                 "\nProfesores: " +teachersSegment);
+    }
+
+    public void switchQueueProcess() {
+        String id = stringInput("Numero de cedula: ");
+        User user = findUser(id);
+
+        if (user != null) {
+            int num = findQueue(user);
+
+            if (num == 0) {
+                System.out.println("Este usuario no se encuentra en ninguna de las filas");
+            } else {
+                String newNum = stringInput("Nueva fila: ");
+                switch (num) {
+                    case 1:
+                        cubiculo1.remove(user);
+                        switchQueue(user, newNum);
+                        break;
+                    case 2:
+                        cubiculo2.remove(user);
+                        switchQueue(user, newNum);
+                        break;
+                    case 3:
+                        cubiculo3.remove(user);
+                        switchQueue(user, newNum);
+                        break;
+                }
+            }
+        } else {
+            System.out.println("Usuario no encontrado");
+        }
+    }
+
+    public void switchQueue(User user, String num) {
+        switch(num) {
+            case "1":
+                cubiculo1.add(user);
+                break;
+            case "2":
+                cubiculo2.add(user);
+                break;
+            case "3":
+                cubiculo3.add(user);
+                break;
+            default:
+                System.out.println("Este cubículo no existe");
+                break;
+        }
+    }
+
+    public int findQueue(User user) {
+        if (cubiculo1.contains(user)) return 1;
+        if (cubiculo2.contains(user)) return 2;
+        if (cubiculo3.contains(user)) return 3;
+        return 0;
+    }
+
+    public void showQueuesStatus() {
+        System.out.println(
+                "Cubículo 1: " +cubiculo1.toString()+
+                "\nCubículo 2: " +cubiculo2.toString()+
+                "\nCubículo 3: " +cubiculo3.toString()
+        );
     }
 
     public int generateRandomNumber() {
