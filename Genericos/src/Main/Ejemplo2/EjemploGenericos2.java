@@ -14,8 +14,8 @@ public class EjemploGenericos2 {
 
         List<String> usersNames = fromArrayToList(new String[]{"Pepe","Mafe"},
                 offerValues);
-
     }
+
     private static <T>List<T> fromArrayToList(T[] c) {
         return Arrays.asList(c);
     }

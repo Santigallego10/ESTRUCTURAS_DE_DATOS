@@ -26,7 +26,7 @@ public class EjemplosGenericos {
         return Arrays.asList(c);
     }
 
-    private static <T>List<T> fromArrayToList(T[] c) {
+    public static <T>List<T> fromArrayToList(T[] c) {
         return Arrays.asList(c);
     }
 }
