@@ -1,9 +1,0 @@
-package co.edu.cue.ed.slideshowCollection.app;
-
-public class MainDeteccionDuplicados {
-
-	public static void main(String[] args) {
-
-	}
-
-}

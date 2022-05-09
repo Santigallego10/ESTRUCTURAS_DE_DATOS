@@ -1,7 +1,0 @@
-package co.edu.cue.ed.slideshowCollection;
-
-public class MainCollection1 {
-	public static void main(String[] args) {
-		
-	}
-}
