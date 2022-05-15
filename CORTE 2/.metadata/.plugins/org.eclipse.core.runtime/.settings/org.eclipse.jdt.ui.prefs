@@ -1,3 +1,6 @@
+content_assist_disabled_computers=org.eclipse.jdt.ui.textProposalCategory\u0000org.eclipse.jdt.ui.javaAllProposalCategory\u0000org.eclipse.jdt.ui.javaTypeProposalCategory\u0000org.eclipse.jdt.ui.javaNoTypeProposalCategory\u0000
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="java.util.Collection"><rhs name\="java.util.LinkedList"/><rhs name\="java.util.ArrayList"/><rhs name\="java.util.TreeSet"/><rhs name\="java.util.HashSet"/></lhs><lhs name\="java.lang.Iterable"><rhs name\="java.util.LinkedList"/><rhs name\="co.edu.cue.ed.generics.model.Oferta"/><rhs name\="java.util.ArrayList"/><rhs name\="java.util.TreeSet"/><rhs name\="java.util.HashSet"/></lhs><lhs name\="java.util.List"><rhs name\="java.util.LinkedList"/><rhs name\="java.util.ArrayList"/></lhs><lhs name\="co.edu.cue.ed.generics.model.Ejm1Producto"><rhs name\="co.edu.cue.ed.generics.model.Ejm1Producto"/><rhs name\="co.edu.cue.ed.generics.model.ProductoDestacado"/></lhs><lhs name\="co.edu.cue.ed.generics.app.Ejm3MainBox"><rhs name\="co.edu.cue.ed.generics.app.Ejm3MainBox"/></lhs><lhs name\="java.lang.Number"><rhs name\="java.lang.Integer"/></lhs><lhs name\="co.edu.cue.ed.generics.app.Ejm5MainGenericsType"><rhs name\="co.edu.cue.ed.generics.app.Ejm5MainGenericsType"/></lhs><lhs name\="co.edu.cue.ed.generics.model.Oferta"><rhs name\="co.edu.cue.ed.generics.model.Oferta"/></lhs><lhs name\="co.edu.cue.ed.generics.ejercicio4.Libreria"><rhs name\="co.edu.cue.ed.generics.ejercicio4.Libreria"/></lhs><lhs name\="co.edu.cue.ed.generics.ejercicio4.Libro"><rhs name\="co.edu.cue.ed.generics.ejercicio4.Libro"/></lhs><lhs name\="co.edu.cue.ed.generics.ejercicio4.Book"><rhs name\="co.edu.cue.ed.generics.ejercicio4.Book"/></lhs><lhs name\="java.util.Set"><rhs name\="java.util.TreeSet"/><rhs name\="java.util.HashSet"/></lhs><lhs name\="co.edu.cue.ed.bolsaSupermercado.model.BolsaSupermercado"><rhs name\="co.edu.cue.ed.bolsaSupermercado.model.BolsaSupermercado"/></lhs><lhs name\="co.edu.cue.ed.bolsaSupermercado.model.Product"><rhs name\="co.edu.cue.ed.bolsaSupermercado.model.Dairy"/></lhs><lhs name\="co.edu.cue.ed.bolsaSupermercado.model.Dairy"><rhs name\="co.edu.cue.ed.bolsaSupermercado.model.Dairy"/></lhs></history>
+content_assist_number_of_computers=19
 content_assist_proposals_background=255,255,255
 content_assist_proposals_foreground=0,0,0
 eclipse.preferences.version=1
@@ -5,6 +8,12 @@ fontPropagated=true
 org.eclipse.jdt.ui.editor.tab.width=
 org.eclipse.jdt.ui.formatterprofiles.version=12
 org.eclipse.jdt.ui.javadoclocations.migrated=true
+org.eclipse.jdt.ui.text.code_templates_migrated=true
+org.eclipse.jdt.ui.text.custom_code_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+org.eclipse.jdt.ui.text.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+org.eclipse.jdt.ui.text.templates_migrated=true
+org.eclipse.jface.textfont=1|Courier New|14.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Courier New;
+proposalOrderMigrated=true
 spelling_locale_initialized=true
 tabWidthPropagated=true
 useAnnotationsPrefPage=true

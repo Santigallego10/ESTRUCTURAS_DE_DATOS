@@ -1,0 +1,56 @@
+package co.edu.cue.ed.generics.model;
+
+public class Ejm1Producto {
+	
+	private int code;
+	private String name;
+	private float saleValue;
+	
+	
+	public Ejm1Producto(int code, String name, float saleValue) {
+		super();
+		this.code = code;
+		this.name = name;
+		this.saleValue = saleValue;
+	}
+
+
+	public int getCode() {
+		return code;
+	}
+
+
+	public void setCode(int code) {
+		this.code = code;
+	}
+
+
+	public String getName() {
+		return name;
+	}
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+	public float getSaleValue() {
+		return saleValue;
+	}
+
+
+	public void setSaleValue(float saleValue) {
+		this.saleValue = saleValue;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Ejm1Producto [code=" + code + ", name=" + name + ", saleValue=" + saleValue + "]";
+	}
+
+	
+	
+	
+}

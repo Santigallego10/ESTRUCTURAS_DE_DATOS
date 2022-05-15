@@ -1,0 +1,12 @@
+package co.edu.cue.ed.generics.app;
+
+public class Ejm3MainBox<T> {
+	private T t;
+	
+	
+	public static void main(String[] args) {
+		
+		
+	}
+
+}

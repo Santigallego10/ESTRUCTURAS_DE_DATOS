@@ -1,0 +1,20 @@
+package co.edu.cue.ed.generics.model;
+
+public class Ejm1Producto {
+	
+	private int code;
+	private String name;
+	private float saleValue;
+	
+	
+	public Ejm1Producto(int code, String name, float saleValue) {
+		super();
+		this.code = code;
+		this.name = name;
+		this.saleValue = saleValue;
+	}
+
+	
+	
+	
+}

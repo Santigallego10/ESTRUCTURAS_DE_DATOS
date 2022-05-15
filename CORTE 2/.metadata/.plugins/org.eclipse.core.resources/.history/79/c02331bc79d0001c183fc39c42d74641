@@ -1,0 +1,20 @@
+package co.edu.cue.ed.generics.app;
+
+import co.edu.cue.ed.generics.model.Oferta;
+
+public class MainPrincipalOferta {
+
+	public static <T> void imprimirOfertas(Oferta<T> subasta){
+		
+	}
+	
+	
+	
+	public static void main(String[] args) {
+		
+		
+		
+		
+	}
+
+}

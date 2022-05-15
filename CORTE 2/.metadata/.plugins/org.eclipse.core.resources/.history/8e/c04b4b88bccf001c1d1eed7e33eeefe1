@@ -1,0 +1,22 @@
+package co.edu.cue.ed.generics.app;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import co.edu.cue.ed.generics.model.Ejm1Producto;
+
+public class Ejm1Main {
+
+	public static void main(String[] args) {
+
+		List<Ejm1Producto> productos= new ArrayList<Ejm1Producto>();
+		
+		productos.add(new Ejm1Producto(1210, "Audifonos", 30));
+		Ejm1Producto productoOfertado= productos.iterator().next();
+		System.out.println(productoOfertado);
+		
+		
+		
+	}
+
+}

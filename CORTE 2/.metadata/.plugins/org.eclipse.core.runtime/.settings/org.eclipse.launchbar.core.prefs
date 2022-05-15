@@ -1,0 +1,8 @@
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:EjemploGenericos,org.eclipse.launchbar.core.descriptorType.default\:Ejm1Main,org.eclipse.launchbar.core.descriptorType.default\:Ejm2Genericos,org.eclipse.launchbar.core.descriptorType.default\:Ejm3MainBox,org.eclipse.launchbar.core.descriptorType.default\:Ejm4Main,org.eclipse.launchbar.core.descriptorType.default\:Ejm5MainGenericsType,org.eclipse.launchbar.core.descriptorType.default\:MainPrincipalOferta,org.eclipse.launchbar.core.descriptorType.default\:Libreria,org.eclipse.launchbar.core.descriptorType.default\:Bookstore,org.eclipse.launchbar.core.descriptorType.default\:Main
+eclipse.preferences.version=1
+org.eclipse.launchbar.core.descriptorType.default\:Bookstore/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:Bookstore/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:EjemploGenericos/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:EjemploGenericos/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local

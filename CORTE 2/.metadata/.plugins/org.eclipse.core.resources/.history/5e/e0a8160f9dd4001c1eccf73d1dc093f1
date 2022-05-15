@@ -1,0 +1,12 @@
+package co.edu.cue.ed.bolsaSupermercado.model;
+
+public class Product {
+
+	protected String nombre;
+	protected Double precio;
+	
+	
+	
+	
+	
+}

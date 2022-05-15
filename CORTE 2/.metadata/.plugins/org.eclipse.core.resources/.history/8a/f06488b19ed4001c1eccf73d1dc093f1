@@ -1,0 +1,23 @@
+package co.edu.cue.ed.bolsaSupermercado.model;
+
+import java.util.List;
+
+public class BolsaSupermercado<T> {
+
+	private List<T> products;
+
+	
+	
+	public List<T> getProducts() {
+		return products;
+	}
+
+	public void setProducts(List<T> products) {
+		this.products = products;
+	}
+	
+	
+	public void add products(){
+		
+	}
+}

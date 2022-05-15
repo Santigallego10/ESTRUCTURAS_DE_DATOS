@@ -1,0 +1,30 @@
+package co.edu.cue.ed.generics.ejercicio4;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
+
+
+public class Bookstore<T> {
+	
+	public static void main(String[] args) {
+		Set<Book> books= new HashSet<Book>();
+		
+		books.add(new Book("Divergente"));
+		books.add(new Book("Insurgente"));
+		books.add(new Book("Leal"));
+		
+		
+		for (Book book : books) {
+			System.out.println(book.toString());
+		}
+		
+
+	}
+	
+	
+	
+}

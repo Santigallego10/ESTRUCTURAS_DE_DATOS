@@ -1,0 +1,13 @@
+package co.edu.cue.ed.bolsaSupermercado.model;
+
+public class Fruit extends Product{
+
+	private Double weight;
+	private String color;
+	public Fruit() {
+	}
+	
+	
+}
+
+

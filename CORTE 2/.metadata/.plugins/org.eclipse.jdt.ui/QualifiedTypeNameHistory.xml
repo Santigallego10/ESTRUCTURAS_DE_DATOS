@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.LinkedList"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="java.lang.Number"/>
+<fullyQualifiedTypeName name="javafx.scene.shape.Box"/>
+<fullyQualifiedTypeName name="co.edu.cue.ed.generics.app.Ejm3MainBox"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="co.edu.cue.ed.generics.app.Ejm5MainGenericsType"/>
+<fullyQualifiedTypeName name="java.lang.Iterable"/>
+<fullyQualifiedTypeName name="javax.management.RuntimeErrorException"/>
+<fullyQualifiedTypeName name="co.edu.cue.ed.generics.model.Oferta"/>
+<fullyQualifiedTypeName name="co.edu.cue.ed.generics.model.Ejm1Producto"/>
+<fullyQualifiedTypeName name="co.edu.cue.ed.generics.model.ProductoDestacado"/>
+<fullyQualifiedTypeName name="co.edu.cue.ed.generics.ejercicio4.Libro"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="java.sql.Array"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="co.edu.cue.ed.generics.ejercicio4.Libreria"/>
+<fullyQualifiedTypeName name="co.edu.cue.ed.generics.ejercicio4.Book"/>
+<fullyQualifiedTypeName name="javax.swing.event.TreeSelectionEvent"/>
+<fullyQualifiedTypeName name="java.util.TreeSet"/>
+<fullyQualifiedTypeName name="java.util.Set"/>
+<fullyQualifiedTypeName name="co.edu.cue.ed.generics.ejercicio4.Video"/>
+<fullyQualifiedTypeName name="co.edu.cue.ed.generics.ejercicio4.Magazine"/>
+<fullyQualifiedTypeName name="java.util.HashSet"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="co.edu.cue.ed.bolsaSupermercado.model.Producto"/>
+<fullyQualifiedTypeName name="java.util.jar.Attributes.Name"/>
+<fullyQualifiedTypeName name="co.edu.cue.ed.bolsaSupermercado.model.Product"/>
+<fullyQualifiedTypeName name="co.edu.cue.ed.bolsaSupermercado.model.Fruit"/>
+<fullyQualifiedTypeName name="co.edu.cue.ed.bolsaSupermercado.model.Cleaning"/>
+<fullyQualifiedTypeName name="co.edu.cue.ed.bolsaSupermercado.model.NonPerishable"/>
+<fullyQualifiedTypeName name="co.edu.cue.ed.bolsaSupermercado.model.BolsaSupermercado"/>
+<fullyQualifiedTypeName name="co.edu.cue.ed.bolsaSupermercado.model.Dairy"/>
+</qualifiedTypeNameHistroy>

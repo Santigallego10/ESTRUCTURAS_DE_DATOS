@@ -1,0 +1,6 @@
+package co.edu.cue.ed.bolsaSupermercado.model;
+
+public class Dairy extends Product{
+
+	private int amount;
+}

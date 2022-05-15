@@ -1,0 +1,11 @@
+package co.edu.cue.ed.bolsaSupermercado.model;
+
+public class NonPerishable extends Product{
+	
+	private int content;
+	private int calories;
+	
+
+	
+	
+}

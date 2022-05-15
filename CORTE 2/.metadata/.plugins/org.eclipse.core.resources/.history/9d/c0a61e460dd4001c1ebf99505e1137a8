@@ -1,0 +1,50 @@
+package co.edu.cue.ed.generics.ejercicio4;
+
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
+
+
+public class Bookstore<T> {
+	
+	public static void main(String[] args) {
+		Set<Book> books= new TreeSet<Book>();
+		
+		books.add(new Book("Insurgente"));
+		books.add(new Book("Insurgente"));
+		books.add(new Book("Leal"));
+		
+		for (Book book2 : books) {
+			System.out.println(book2.getName());
+		}
+		
+		
+		Set<Video> videos= new TreeSet<Video>();
+		
+		videos.add(new Video("Iron Man"));
+		videos.add(new Video("Spider Man"));
+		videos.add(new Video("Doctor Strange"));
+		videos.add(new Video("Capitan America"));
+		
+		for (Video video : videos) {
+			System.out.println(video.getName());
+		}
+		
+		
+		
+		Set<Magazine> books= new TreeSet<Book>();
+		
+		books.add(new Book("Insurgente"));
+		books.add(new Book("Insurgente"));
+		books.add(new Book("Leal"));
+		
+		for (Book book2 : books) {
+			System.out.println(book2.getName());
+		}
+
+	}
+
+	
+}

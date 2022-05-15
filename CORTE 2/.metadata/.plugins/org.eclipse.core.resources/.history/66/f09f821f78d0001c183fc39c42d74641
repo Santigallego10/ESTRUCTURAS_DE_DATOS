@@ -1,0 +1,29 @@
+package co.edu.cue.ed.generics.model;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+public class Oferta<T> implements Iterable<T>{
+
+	private List<T> productos;
+	private int cantidadElementos;
+	
+	
+	public Oferta(int max) {
+		this.cantidadElementos=max;
+		this.productos=new ArrayList<>();
+	}
+
+
+	@Override
+	public Iterator<T> iterator() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+	
+	
+	
+}

@@ -1,0 +1,10 @@
+package co.edu.cue.ed.generics.model;
+
+public class ProductoDestacado extends Ejm1Producto {
+
+	public ProductoDestacado(int code, String name, float saleValue) {
+		super(code, name, saleValue);
+	}
+
+	
+}
