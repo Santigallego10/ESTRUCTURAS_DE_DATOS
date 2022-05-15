@@ -14,4 +14,11 @@ public class Box<T> {
     public <U extends Number> void inspect(U u) {
         System.out.println();
     }
+
+    public static void main(String[] args) {
+        Box<Integer> integerBox = new Box<Integer>();
+
+        integerBox.setT(new Integer(10));
+        integerBox.inspect(67);
+    }
 }
