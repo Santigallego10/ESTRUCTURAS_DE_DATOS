@@ -34,4 +34,12 @@ public class Nonperishable extends Product{
     public void setCalories(int calories) {
         this.calories = calories;
     }
+
+    @Override
+    public String toString() {
+        return "No perecedero: {" +
+                "contenido=" + content +
+                ", calorias=" + calories +
+                '}';
+    }
 }

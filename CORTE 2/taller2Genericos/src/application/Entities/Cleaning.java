@@ -29,4 +29,12 @@ public class Cleaning extends Product{
     public void setLiters(double liters) {
         this.liters = liters;
     }
+
+    @Override
+    public String toString() {
+        return "Producto de limpieza: {" +
+                "componentes ='" + components + '\'' +
+                ", litros =" + liters +
+                '}';
+    }
 }

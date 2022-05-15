@@ -31,4 +31,12 @@ public class Fruit extends Product{
     public void setColor(String color) {
         this.color = color;
     }
+
+    @Override
+    public String toString() {
+        return "Fruta: {" +
+                "peso=" + weight +
+                ", color='" + color + '\'' +
+                '}';
+    }
 }

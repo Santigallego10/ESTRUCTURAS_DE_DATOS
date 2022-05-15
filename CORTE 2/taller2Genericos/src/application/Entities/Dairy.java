@@ -29,4 +29,12 @@ public class Dairy extends Product{
     public void setProteins(int proteins) {
         this.proteins = proteins;
     }
+
+    @Override
+    public String toString() {
+        return "Producto lacteo: {" +
+                "cantidad=" + amount +
+                ", proteinas=" + proteins +
+                '}';
+    }
 }
