@@ -18,7 +18,7 @@ public class Box<T> {
     public static void main(String[] args) {
         Box<Integer> integerBox = new Box<Integer>();
 
-        integerBox.setT(new Integer(10));
+        integerBox.setT(10);
         integerBox.inspect(67);
     }
 }
