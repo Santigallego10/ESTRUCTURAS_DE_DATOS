@@ -13,10 +13,6 @@ public class BolsaSupermercado <T>{
         return products;
     }
 
-    public void addProduct(T t){
-        this.products.add(t);
-    }
-
     public void setProducts(List<T> products) {
         this.products = products;
     }
