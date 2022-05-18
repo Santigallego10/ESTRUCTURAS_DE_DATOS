@@ -10,8 +10,12 @@ public class GFG2 {
 
         //Adding items to the ll
         ll.add(10);
-        ll.add(20);
+        ll.add(11);
+        ll.add(12);
+        ll.add(13);
+        ll.add(14);
         ll.add(15);
+        ll.add(16);
 
         //Printing the top element of the LinkedList
         System.out.println(ll.peek());
