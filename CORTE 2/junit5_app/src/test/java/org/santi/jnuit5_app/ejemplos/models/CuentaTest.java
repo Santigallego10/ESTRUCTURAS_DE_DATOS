@@ -5,9 +5,17 @@ import org.junit.jupiter.api.condition.DisabledOnOs;
 import org.junit.jupiter.api.condition.EnabledIfEnvironmentVariable;
 import org.junit.jupiter.api.condition.EnabledOnOs;
 import org.junit.jupiter.api.condition.OS;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
+import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.MethodSource;
+import org.junit.jupiter.params.provider.ValueSource;
 import org.santi.jnuit5_app.ejemplos.exceptions.DineroInsuficienteException;
 
+import java.lang.reflect.Array;
 import java.math.BigDecimal;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -54,13 +62,14 @@ class CuentaTest {
         //assertNotEquals(cuenta2,cuenta);
     }
 
-    @Test
-    void testDebitoCuenta() {
+    @ParameterizedTest
+    @ValueSource(strings = {"100","200","300"})
+    void testDebitoCuenta(String monto) {
         Cuenta cuenta = new Cuenta("Andres",new BigDecimal("1000.12345"));
-        cuenta.debito(new BigDecimal(100));
+        cuenta.debito(new BigDecimal(monto));
         assertNotNull(cuenta.getSaldo());
         assertEquals(900, cuenta.getSaldo().intValue());
-        assertEquals("900.12345",cuenta.getSaldo().toPlainString());
+        assertTrue(cuenta.getSaldo().compareTo(BigDecimal.ZERO)>0);
 
     }
 
@@ -130,6 +139,23 @@ class CuentaTest {
     @Nested
     class SistemaOperativoTest{
 
+        @RepeatedTest(value = 2, name = "{currentRepetition}")
+        void testNombreCuenta(RepetitionInfo info) {
+            if(info.getCurrentRepetition() == 2){
+                System.out.println("esto en la 22222");
+            }
+            Cuenta cuenta = new Cuenta("Andres",new BigDecimal("1000.12345"));
+            //cuenta.setNombre("Andres");
+
+            String esperado = "ANDRES";
+            String real = cuenta.getNombre();
+
+            assertNotNull(real,"La cuenta no puede ser nula");
+
+            assertEquals(esperado,real, "Ese no es el nombre");
+            assertFalse(real.equals("Andres"),"Es null");
+        }
+
         @Test
         @EnabledOnOs(OS.WINDOWS)
         void testSoloWindows(){
@@ -178,6 +204,63 @@ class CuentaTest {
         assertTrue(cuenta.getSaldo().compareTo(BigDecimal.ZERO) > 0);
 
     }
+
+    @ParameterizedTest
+    @CsvSource({"1,100","2,200","3,300"})
+    void testDebitoCuentaCsvSource(String index, String monto) {
+        System.out.println(index+"->"+monto);
+        Cuenta cuenta = new Cuenta("Andres",new BigDecimal("1000.12345"));
+        cuenta.debito(new BigDecimal(monto));
+        assertNotNull(cuenta.getSaldo());
+        //assertEquals(900, cuenta.getSaldo().intValue());
+        //assertTrue(cuenta.getSaldo().compareTo(BigDecimal.ZERO)>0);
+
+    }
+
+    @ParameterizedTest
+    @CsvFileSource(resources = "/data.csv")
+    void testDebitoCuentaCsvFileSource(String monto) {
+        System.out.println("->"+monto);
+        Cuenta cuenta = new Cuenta("Andres",new BigDecimal("1000.12345"));
+        cuenta.debito(new BigDecimal(monto));
+        assertNotNull(cuenta.getSaldo());
+        //assertEquals(900, cuenta.getSaldo().intValue());
+        //assertTrue(cuenta.getSaldo().compareTo(BigDecimal.ZERO)>0);
+
+    }
+
+    @ParameterizedTest
+    @MethodSource("montoList")
+    void testDebitoCuentaMethodSource(String monto) {
+        System.out.println("->"+monto);
+        Cuenta cuenta = new Cuenta("Andres",new BigDecimal("1000.12345"));
+        cuenta.debito(new BigDecimal(monto));
+        assertNotNull(cuenta.getSaldo());
+        //assertEquals(900, cuenta.getSaldo().intValue());
+        //assertTrue(cuenta.getSaldo().compareTo(BigDecimal.ZERO)>0);
+
+    }
+
+    private static List<String> montoList(){
+        return Arrays.asList("100","200");
+    }
+
+    @ParameterizedTest
+    @CsvSource({"200,100","250,200","300,300"})
+    void testDebitoCuentaCsvSource2(String saldo, String monto) {
+        Cuenta cuenta = new Cuenta("Jhon Doe",new BigDecimal("0"));
+        System.out.println(saldo+"->"+monto);
+        cuenta.setSaldo(new BigDecimal(saldo));
+        cuenta.debito(new BigDecimal(monto));
+        //Cuenta cuenta = new Cuenta("Andres",new BigDecimal("1000.12345"));
+        cuenta.debito(new BigDecimal(monto));
+        assertNotNull(cuenta.getSaldo());
+        //assertEquals(900, cuenta.getSaldo().intValue());
+        //assertTrue(cuenta.getSaldo().compareTo(BigDecimal.ZERO)>0);
+
+    }
+
+
 
 }
 
