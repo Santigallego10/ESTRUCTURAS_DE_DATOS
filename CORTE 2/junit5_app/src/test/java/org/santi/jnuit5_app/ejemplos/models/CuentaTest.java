@@ -1,5 +1,7 @@
 package org.santi.jnuit5_app.ejemplos.models;
 
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.santi.jnuit5_app.ejemplos.exceptions.DineroInsuficienteException;
 
@@ -10,6 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class CuentaTest {
 
     @Test
+    @DisplayName("Probando nombre de la cuenta: ")
     void testNombreCuenta() {
         Cuenta cuenta = new Cuenta("Andres",new BigDecimal("1000.12345"));
         //cuenta.setNombre("Andres");
@@ -17,8 +20,10 @@ class CuentaTest {
         String esperado = "ANDRES";
         String real = cuenta.getNombre();
 
-        assertEquals(esperado,real);
-        assertTrue(real.equals("Andres"));
+        assertNotNull(real,"La cuenta no puede ser nula");
+
+        assertEquals(esperado,real, "Ese no es el nombre");
+        assertFalse(real.equals("Andres"),"Es null");
     }
 
     @Test
@@ -69,5 +74,46 @@ class CuentaTest {
         String actual = exception.getMessage();
         String esperado = "Dinero insuficiente";
         assertEquals(esperado, actual);
+    }
+
+    @Test
+    @Disabled
+    void testTransferirDineroCuentas() {
+        Cuenta cuenta = new Cuenta("Jhon doe",new BigDecimal("2.500"));
+        Cuenta cuenta2 = new Cuenta("Andres",new BigDecimal("2.500"));
+
+        Banco banco = new Banco();
+        banco.setNombre("BBVA");
+        banco.transferir(cuenta2, cuenta, new BigDecimal(500));
+        assertEquals("1.000",cuenta2.getSaldo().toPlainString());
+        assertEquals("2.000",cuenta.getSaldo().toPlainString());
+
+    }
+
+    @Test
+    @Disabled
+    void testRelacionBancoCuentas() {
+        Cuenta cuenta = new Cuenta("Jhon doe",new BigDecimal("2.500"));
+        Cuenta cuenta2 = new Cuenta("Andres",new BigDecimal("2.500"));
+
+        Banco banco = new Banco();
+
+        banco.addCuenta(cuenta);
+        banco.addCuenta(cuenta2);
+        banco.setNombre("BBVA");
+        banco.transferir(cuenta2, cuenta, new BigDecimal(500));
+
+        assertAll(()->
+        {
+            assertEquals("1.000",cuenta2.getSaldo().toPlainString());
+        },
+                ()->{        assertEquals("2.000",cuenta.getSaldo().toPlainString());},
+                ()->{        assertEquals(2,banco.getCuentas().size());},
+                ()->{        assertEquals("BBVA",cuenta.getBanco().getNombre());}
+        );
+
+
+        //assertEquals("Andres",banco.getCuentas().stream().filter(c -> c.getNombre().equals("Andres")).findFirst().get().getNombre());
+
     }
 }
