@@ -1,4 +1,4 @@
-package co.edu.cue.stacksAndQueues.example3;
+package co.edu.cue.stacksAndQueues.queueEx3;
 
 public class PrincipalCola {
     public static void main(String[] args) {

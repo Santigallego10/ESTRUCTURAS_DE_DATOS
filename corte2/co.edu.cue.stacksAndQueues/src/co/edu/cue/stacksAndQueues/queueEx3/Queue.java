@@ -1,4 +1,4 @@
-package co.edu.cue.stacksAndQueues.example3;
+package co.edu.cue.stacksAndQueues.queueEx3;
 
 import java.util.ArrayList;
 

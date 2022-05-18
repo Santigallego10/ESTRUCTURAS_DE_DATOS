@@ -1,4 +1,4 @@
-package co.edu.cue.stacksAndQueues.example2;
+package co.edu.cue.stacksAndQueues.queueEx2;
 
 import java.util.LinkedList;
 import java.util.Queue;

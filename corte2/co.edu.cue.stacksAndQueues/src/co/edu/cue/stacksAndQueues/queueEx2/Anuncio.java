@@ -1,4 +1,4 @@
-package co.edu.cue.stacksAndQueues.example2;
+package co.edu.cue.stacksAndQueues.queueEx2;
 
 public class Anuncio {
     private String nombre;
