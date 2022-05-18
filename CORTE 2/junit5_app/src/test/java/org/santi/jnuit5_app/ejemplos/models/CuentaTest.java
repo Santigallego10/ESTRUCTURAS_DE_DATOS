@@ -1,15 +1,23 @@
 package org.santi.jnuit5_app.ejemplos.models;
 
-import org.junit.jupiter.api.Disabled;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.condition.DisabledOnOs;
+import org.junit.jupiter.api.condition.EnabledIfEnvironmentVariable;
+import org.junit.jupiter.api.condition.EnabledOnOs;
+import org.junit.jupiter.api.condition.OS;
 import org.santi.jnuit5_app.ejemplos.exceptions.DineroInsuficienteException;
 
 import java.math.BigDecimal;
+import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+//@TestInstance(TestInstance.Lifecycle.PER_CLASS) //manejar ciclo de vida
 class CuentaTest {
+
+    Cuenta cuenta;
+
+    //ES POSIBLE CREAR INSTANCIAS DE CLASES FUERA  DE LOS METODOS Y REUTILIZARLO EN CADA UNO DE ESTOS
 
     @Test
     @DisplayName("Probando nombre de la cuenta: ")
@@ -115,5 +123,42 @@ class CuentaTest {
 
         //assertEquals("Andres",banco.getCuentas().stream().filter(c -> c.getNombre().equals("Andres")).findFirst().get().getNombre());
 
+    }
+
+    @Test
+    @EnabledOnOs(OS.WINDOWS)
+    void testSoloWindows(){
+
+    }
+
+    @Test
+    @EnabledOnOs({OS.LINUX, OS.MAC })
+    void testSoloLinuxMac() {
+    }
+
+    @Test
+    @DisabledOnOs(OS.MAC)
+    void noMac() {
+    }
+
+    @Test
+    void imprimirVariablesAmbiente() {
+        Map<String, String> getenv = System.getenv();
+        getenv.forEach((k, v)-> System.out.println(k + "=" +v));
+    }
+
+    @Test
+    @EnabledIfEnvironmentVariable(named= "JAVA_HOME",matches = "xxxx-xxxx-xxxx")
+    void testJavaHome() {
+    }
+
+    @Test
+    @EnabledIfEnvironmentVariable(named = "Numbers of processors",matches = "8")
+    void testProcesadores() {
+    }
+
+    @Test
+    @EnabledIfEnvironmentVariable(named = "Environment",matches = "dev")
+    void testEnv() {
     }
 }
