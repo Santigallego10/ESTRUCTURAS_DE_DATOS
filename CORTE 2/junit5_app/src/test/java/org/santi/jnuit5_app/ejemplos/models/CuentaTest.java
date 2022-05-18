@@ -11,6 +11,8 @@ import java.math.BigDecimal;
 import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assumptions.*;
+
 
 //@TestInstance(TestInstance.Lifecycle.PER_CLASS) //manejar ciclo de vida
 class CuentaTest {
@@ -125,21 +127,25 @@ class CuentaTest {
 
     }
 
-    @Test
-    @EnabledOnOs(OS.WINDOWS)
-    void testSoloWindows(){
+    @Nested
+    class SistemaOperativoTest{
 
+        @Test
+        @EnabledOnOs(OS.WINDOWS)
+        void testSoloWindows(){
+        }
+
+        @Test
+        @EnabledOnOs({OS.LINUX, OS.MAC })
+        void testSoloLinuxMac() {
+        }
+
+        @Test
+        @DisabledOnOs(OS.MAC)
+        void noMac() {
+        }
     }
 
-    @Test
-    @EnabledOnOs({OS.LINUX, OS.MAC })
-    void testSoloLinuxMac() {
-    }
-
-    @Test
-    @DisabledOnOs(OS.MAC)
-    void noMac() {
-    }
 
     @Test
     void imprimirVariablesAmbiente() {
@@ -161,4 +167,22 @@ class CuentaTest {
     @EnabledIfEnvironmentVariable(named = "Environment",matches = "dev")
     void testEnv() {
     }
+
+    @Test
+    void testSaldoCuentaDev(){
+        boolean esDev = "dev".equals(System.getProperty("ENV"));
+        assumeTrue(esDev);
+        Cuenta cuenta = new Cuenta("Andres", new BigDecimal("1000.12345"));
+        assertEquals(1000.12345,cuenta.getSaldo().doubleValue());
+        assertFalse(cuenta.getSaldo().compareTo(BigDecimal.ZERO) < 0);
+        assertTrue(cuenta.getSaldo().compareTo(BigDecimal.ZERO) > 0);
+
+    }
+
 }
+
+
+
+
+
+
