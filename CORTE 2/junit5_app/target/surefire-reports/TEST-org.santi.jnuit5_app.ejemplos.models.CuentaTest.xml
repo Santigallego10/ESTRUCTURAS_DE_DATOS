@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="org.santi.jnuit5_app.ejemplos.models.CuentaTest" time="6.876" tests="33" errors="2" skipped="8" failures="3">
+  <properties>
+    <property name="java.specification.version" value="14"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/santiagogallego/Desktop/UNIVERSIDAD/PROGRAMACION II/DT/cursos/ws_programacion/cursos/cursos/cursos-java2/ESTRUCTURAS_DE_DATOS/CORTE 2/junit5_app/target/test-classes:/Users/santiagogallego/Desktop/UNIVERSIDAD/PROGRAMACION II/DT/cursos/ws_programacion/cursos/cursos/cursos-java2/ESTRUCTURAS_DE_DATOS/CORTE 2/junit5_app/target/classes:/Users/santiagogallego/.m2/repository/org/junit/jupiter/junit-jupiter/5.6.3/junit-jupiter-5.6.3.jar:/Users/santiagogallego/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.3/junit-jupiter-api-5.6.3.jar:/Users/santiagogallego/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/Users/santiagogallego/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/santiagogallego/.m2/repository/org/junit/platform/junit-platform-commons/1.6.3/junit-platform-commons-1.6.3.jar:/Users/santiagogallego/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.6.3/junit-jupiter-params-5.6.3.jar:/Users/santiagogallego/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.6.3/junit-jupiter-engine-5.6.3.jar:/Users/santiagogallego/.m2/repository/org/junit/platform/junit-platform-engine/1.6.3/junit-platform-engine-1.6.3.jar:"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="14"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="CO"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-14.0.2.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/santiagogallego/Desktop/UNIVERSIDAD/PROGRAMACION II/DT/cursos/ws_programacion/cursos/cursos/cursos-java2/ESTRUCTURAS_DE_DATOS/CORTE 2/junit5_app/target/surefire/surefirebooter3364268104094306976.jar /Users/santiagogallego/Desktop/UNIVERSIDAD/PROGRAMACION II/DT/cursos/ws_programacion/cursos/cursos/cursos-java2/ESTRUCTURAS_DE_DATOS/CORTE 2/junit5_app/target/surefire 2022-05-19T10-44-32_790-jvmRun1 surefire1541327856143599319tmp surefire_016297451792189360166tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/santiagogallego/Desktop/UNIVERSIDAD/PROGRAMACION II/DT/cursos/ws_programacion/cursos/cursos/cursos-java2/ESTRUCTURAS_DE_DATOS/CORTE 2/junit5_app/target/test-classes:/Users/santiagogallego/Desktop/UNIVERSIDAD/PROGRAMACION II/DT/cursos/ws_programacion/cursos/cursos/cursos-java2/ESTRUCTURAS_DE_DATOS/CORTE 2/junit5_app/target/classes:/Users/santiagogallego/.m2/repository/org/junit/jupiter/junit-jupiter/5.6.3/junit-jupiter-5.6.3.jar:/Users/santiagogallego/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.3/junit-jupiter-api-5.6.3.jar:/Users/santiagogallego/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/Users/santiagogallego/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/santiagogallego/.m2/repository/org/junit/platform/junit-platform-commons/1.6.3/junit-platform-commons-1.6.3.jar:/Users/santiagogallego/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.6.3/junit-jupiter-params-5.6.3.jar:/Users/santiagogallego/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.6.3/junit-jupiter-engine-5.6.3.jar:/Users/santiagogallego/.m2/repository/org/junit/platform/junit-platform-engine/1.6.3/junit-platform-engine-1.6.3.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/santiagogallego"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2020-07-14"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk-14.0.2.jdk/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/santiagogallego/Desktop/UNIVERSIDAD/PROGRAMACION II/DT/cursos/ws_programacion/cursos/cursos/cursos-java2/ESTRUCTURAS_DE_DATOS/CORTE 2/junit5_app"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="surefire.real.class.path" value="/Users/santiagogallego/Desktop/UNIVERSIDAD/PROGRAMACION II/DT/cursos/ws_programacion/cursos/cursos/cursos-java2/ESTRUCTURAS_DE_DATOS/CORTE 2/junit5_app/target/surefire/surefirebooter3364268104094306976.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="14.0.2+12-46"/>
+    <property name="user.name" value="santiagogallego"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="10.16"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="/Users/santiagogallego/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/var/folders/vr/r9lnw4kn6916gws7mk3bt9900000gn/T/"/>
+    <property name="idea.version" value="2021.3.2"/>
+    <property name="java.version" value="14.0.2"/>
+    <property name="user.dir" value="/Users/santiagogallego/Desktop/UNIVERSIDAD/PROGRAMACION II/DT/cursos/ws_programacion/cursos/cursos/cursos-java2/ESTRUCTURAS_DE_DATOS/CORTE 2/junit5_app"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.library.path" value="/Users/santiagogallego/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="14.0.2+12-46"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="58.0"/>
+  </properties>
+  <testcase name="testDebitoCuentaCsvSource2{String, String}[1]" classname="org.santi.jnuit5_app.ejemplos.models.CuentaTest" time="0.086"/>
+  <testcase name="testDebitoCuentaCsvSource2{String, String}[2]" classname="org.santi.jnuit5_app.ejemplos.models.CuentaTest" time="0.04">
+    <error message="Dinero insuficiente" type="org.santi.jnuit5_app.ejemplos.exceptions.DineroInsuficienteException">org.santi.jnuit5_app.ejemplos.exceptions.DineroInsuficienteException: Dinero insuficiente
+	at org.santi.jnuit5_app.ejemplos.models.CuentaTest.testDebitoCuentaCsvSource2(CuentaTest.java:261)
+</error>
+    <system-out><![CDATA[250->200
+]]></system-out>
+  </testcase>
+  <testcase name="testDebitoCuentaCsvSource2{String, String}[3]" classname="org.santi.jnuit5_app.ejemplos.models.CuentaTest" time="0.003">
+    <error message="Dinero insuficiente" type="org.santi.jnuit5_app.ejemplos.exceptions.DineroInsuficienteException">org.santi.jnuit5_app.ejemplos.exceptions.DineroInsuficienteException: Dinero insuficiente
+	at org.santi.jnuit5_app.ejemplos.models.CuentaTest.testDebitoCuentaCsvSource2(CuentaTest.java:261)
+</error>
+    <system-out><![CDATA[300->300
+]]></system-out>
+  </testcase>
+  <testcase name="testProcesadores" classname="org.santi.jnuit5_app.ejemplos.models.CuentaTest" time="0">
+    <skipped message="Environment variable [Numbers of processors] does not exist"/>
+  </testcase>
+  <testcase name="testDebitoCuentaCsvSource{String, String}[1]" classname="org.santi.jnuit5_app.ejemplos.models.CuentaTest" time="0.002"/>
+  <testcase name="testDebitoCuentaCsvSource{String, String}[2]" classname="org.santi.jnuit5_app.ejemplos.models.CuentaTest" time="0.001"/>
+  <testcase name="testDebitoCuentaCsvSource{String, String}[3]" classname="org.santi.jnuit5_app.ejemplos.models.CuentaTest" time="0"/>
+  <testcase name="testEnv" classname="org.santi.jnuit5_app.ejemplos.models.CuentaTest" time="0">
+    <skipped message="Environment variable [Environment] does not exist"/>
+  </testcase>
+  <testcase name="testDebitoCuentaCsvFileSource{String}[1]" classname="org.santi.jnuit5_app.ejemplos.models.CuentaTest" time="0.001"/>
+  <testcase name="testDebitoCuentaCsvFileSource{String}[2]" classname="org.santi.jnuit5_app.ejemplos.models.CuentaTest" time="0"/>
+  <testcase name="testDebitoCuentaCsvFileSource{String}[3]" classname="org.santi.jnuit5_app.ejemplos.models.CuentaTest" time="0"/>
+  <testcase name="testSaldoCuentaDev" classname="org.santi.jnuit5_app.ejemplos.models.CuentaTest" time="0">
+    <skipped message="Assumption failed: assumption is not true" type="org.opentest4j.TestAbortedException">org.opentest4j.TestAbortedException: Assumption failed: assumption is not true
+	at org.santi.jnuit5_app.ejemplos.models.CuentaTest.testSaldoCuentaDev(CuentaTest.java:205)
+</skipped>
+  </testcase>
+  <testcase name="testDebitoCuenta{String}[1]" classname="org.santi.jnuit5_app.ejemplos.models.CuentaTest" time="0.002"/>
+  <testcase name="testDebitoCuenta{String}[2]" classname="org.santi.jnuit5_app.ejemplos.models.CuentaTest" time="0.004">
+    <failure message="expected: &lt;900&gt; but was: &lt;800&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <900> but was: <800>
+	at org.santi.jnuit5_app.ejemplos.models.CuentaTest.testDebitoCuenta(CuentaTest.java:76)
+]]></failure>
+  </testcase>
+  <testcase name="testDebitoCuenta{String}[3]" classname="org.santi.jnuit5_app.ejemplos.models.CuentaTest" time="0.001">
+    <failure message="expected: &lt;900&gt; but was: &lt;700&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <900> but was: <700>
+	at org.santi.jnuit5_app.ejemplos.models.CuentaTest.testDebitoCuenta(CuentaTest.java:76)
+]]></failure>
+  </testcase>
+  <testcase name="testTransferirDineroCuentas" classname="org.santi.jnuit5_app.ejemplos.models.CuentaTest" time="0">
+    <skipped message="void org.santi.jnuit5_app.ejemplos.models.CuentaTest.testTransferirDineroCuentas() is @Disabled"/>
+  </testcase>
+  <testcase name="testSaldoCuenta" classname="org.santi.jnuit5_app.ejemplos.models.CuentaTest" time="0.001"/>
+  <testcase name="testJavaHome" classname="org.santi.jnuit5_app.ejemplos.models.CuentaTest" time="0">
+    <skipped message="Environment variable [JAVA_HOME] does not exist"/>
+  </testcase>
+  <testcase name="testDineroInsuficiente" classname="org.santi.jnuit5_app.ejemplos.models.CuentaTest" time="0.001"/>
+  <testcase name="testRelacionBancoCuentas" classname="org.santi.jnuit5_app.ejemplos.models.CuentaTest" time="0">
+    <skipped message="void org.santi.jnuit5_app.ejemplos.models.CuentaTest.testRelacionBancoCuentas() is @Disabled"/>
+  </testcase>
+  <testcase name="testReferenciaCuenta" classname="org.santi.jnuit5_app.ejemplos.models.CuentaTest" time="0"/>
+  <testcase name="testDebitoCuentaMethodSource{String}[1]" classname="org.santi.jnuit5_app.ejemplos.models.CuentaTest" time="0.001"/>
+  <testcase name="testDebitoCuentaMethodSource{String}[2]" classname="org.santi.jnuit5_app.ejemplos.models.CuentaTest" time="0.001"/>
+  <testcase name="pruebaTimeOut" classname="org.santi.jnuit5_app.ejemplos.models.CuentaTest" time="0.91"/>
+  <testcase name="testTimeOutAssertions" classname="org.santi.jnuit5_app.ejemplos.models.CuentaTest" time="5.521">
+    <failure message="execution exceeded timeout of 5000 ms by 505 ms" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: execution exceeded timeout of 5000 ms by 505 ms
+	at org.santi.jnuit5_app.ejemplos.models.CuentaTest.testTimeOutAssertions(CuentaTest.java:277)
+</failure>
+  </testcase>
+  <testcase name="testCredtitoCuenta" classname="org.santi.jnuit5_app.ejemplos.models.CuentaTest" time="0.001"/>
+  <testcase name="imprimirVariablesAmbiente" classname="org.santi.jnuit5_app.ejemplos.models.CuentaTest" time="0.004"/>
+  <testcase name="testNombreCuenta{TestInfo, TestReporter}" classname="org.santi.jnuit5_app.ejemplos.models.CuentaTest" time="0.002"/>
+  <testcase name="testSoloLinuxMac" classname="org.santi.jnuit5_app.ejemplos.models.CuentaTest$SistemaOperativoTest" time="0.005"/>
+  <testcase name="testSoloWindows" classname="org.santi.jnuit5_app.ejemplos.models.CuentaTest$SistemaOperativoTest" time="0">
+    <skipped message="Disabled on operating system: Mac OS X"/>
+  </testcase>
+  <testcase name="noMac" classname="org.santi.jnuit5_app.ejemplos.models.CuentaTest$SistemaOperativoTest" time="0">
+    <skipped message="Disabled on operating system: Mac OS X"/>
+  </testcase>
+  <testcase name="testNombreCuenta{RepetitionInfo}[1]" classname="org.santi.jnuit5_app.ejemplos.models.CuentaTest$SistemaOperativoTest" time="0.001"/>
+  <testcase name="testNombreCuenta{RepetitionInfo}[2]" classname="org.santi.jnuit5_app.ejemplos.models.CuentaTest$SistemaOperativoTest" time="0.002"/>
+</testsuite>

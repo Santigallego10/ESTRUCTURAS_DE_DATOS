@@ -14,9 +14,11 @@ import org.santi.jnuit5_app.ejemplos.exceptions.DineroInsuficienteException;
 
 import java.lang.reflect.Array;
 import java.math.BigDecimal;
+import java.time.Duration;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assumptions.*;
@@ -29,10 +31,12 @@ class CuentaTest {
 
     //ES POSIBLE CREAR INSTANCIAS DE CLASES FUERA  DE LOS METODOS Y REUTILIZARLO EN CADA UNO DE ESTOS
 
+    @Tag("PruebaTags")
     @Test
     @DisplayName("Probando nombre de la cuenta: ")
-    void testNombreCuenta() {
+    void testNombreCuenta(TestInfo testInfo, TestReporter testReporter) {
         Cuenta cuenta = new Cuenta("Andres",new BigDecimal("1000.12345"));
+        System.out.println(testInfo+" ---> "+testReporter);
         //cuenta.setNombre("Andres");
 
         String esperado = "ANDRES";
@@ -44,6 +48,7 @@ class CuentaTest {
         assertFalse(real.equals("Andres"),"Es null");
     }
 
+    @Tag("PruebaTags")
     @Test
     void testSaldoCuenta(){
         Cuenta cuenta = new Cuenta("Andres", new BigDecimal("1000.12345"));
@@ -260,8 +265,19 @@ class CuentaTest {
 
     }
 
+    @Test
+    @Timeout(value = 1000, unit = TimeUnit.MILLISECONDS)
+    void pruebaTimeOut() throws InterruptedException {
+        TimeUnit.MILLISECONDS.sleep(900);
+    }
 
-
+    @Test
+    @Tag("TimeOut")
+    void testTimeOutAssertions() {
+        assertTimeout(Duration.ofSeconds(5), ()->{
+            TimeUnit.MILLISECONDS.sleep(5500);
+        });
+    }
 }
 
 

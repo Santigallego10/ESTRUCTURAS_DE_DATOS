@@ -1,0 +1,24 @@
+-------------------------------------------------------------------------------
+Test set: org.santi.jnuit5_app.ejemplos.models.CuentaTest
+-------------------------------------------------------------------------------
+Tests run: 33, Failures: 3, Errors: 2, Skipped: 8, Time elapsed: 6.876 s <<< FAILURE! - in org.santi.jnuit5_app.ejemplos.models.CuentaTest
+testDebitoCuentaCsvSource2{String, String}[2]  Time elapsed: 0.04 s  <<< ERROR!
+org.santi.jnuit5_app.ejemplos.exceptions.DineroInsuficienteException: Dinero insuficiente
+	at org.santi.jnuit5_app.ejemplos.models.CuentaTest.testDebitoCuentaCsvSource2(CuentaTest.java:261)
+
+testDebitoCuentaCsvSource2{String, String}[3]  Time elapsed: 0.003 s  <<< ERROR!
+org.santi.jnuit5_app.ejemplos.exceptions.DineroInsuficienteException: Dinero insuficiente
+	at org.santi.jnuit5_app.ejemplos.models.CuentaTest.testDebitoCuentaCsvSource2(CuentaTest.java:261)
+
+testDebitoCuenta{String}[2]  Time elapsed: 0.004 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <900> but was: <800>
+	at org.santi.jnuit5_app.ejemplos.models.CuentaTest.testDebitoCuenta(CuentaTest.java:76)
+
+testDebitoCuenta{String}[3]  Time elapsed: 0.001 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <900> but was: <700>
+	at org.santi.jnuit5_app.ejemplos.models.CuentaTest.testDebitoCuenta(CuentaTest.java:76)
+
+testTimeOutAssertions  Time elapsed: 5.521 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: execution exceeded timeout of 5000 ms by 505 ms
+	at org.santi.jnuit5_app.ejemplos.models.CuentaTest.testTimeOutAssertions(CuentaTest.java:277)
+
