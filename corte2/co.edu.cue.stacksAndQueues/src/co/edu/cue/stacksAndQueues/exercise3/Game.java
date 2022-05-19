@@ -1,7 +1,6 @@
 package co.edu.cue.stacksAndQueues.exercise3;
 
 import java.util.*;
-import java.util.stream.Collector;
 
 public class Game {
     private Queue<Integer> A = new LinkedList<>();
