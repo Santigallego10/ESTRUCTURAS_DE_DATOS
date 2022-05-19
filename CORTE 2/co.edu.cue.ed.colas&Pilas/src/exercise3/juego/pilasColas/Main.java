@@ -45,8 +45,6 @@ public class Main {
 
        // }
         System.out.println("\n");
-        System.out.println("A: "+A);
-        System.out.println("B: "+B);
         System.out.println("Lista de 1A: "+listOf1A);
         System.out.println("Lista de 2B: "+listOf2B);
         System.out.println("Lista de 0AB: "+listOfSameElements0);
