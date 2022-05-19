@@ -1,8 +1,0 @@
-package co.edu.cue.ed.generics.model;
-
-public class Ejm1Producto {
-	
-	private int code;
-	private String name;
-	
-}

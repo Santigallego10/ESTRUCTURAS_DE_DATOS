@@ -1,9 +1,0 @@
-package co.edu.cue.ed.generics.app;
-
-public class EjemploGenericos {
-
-	public static void main(String[] args) {
-		
-	}
-
-}

@@ -2690,3 +2690,231 @@ Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING
 
 !ENTRY org.eclipse.launchbar.core 2 0 2022-05-15 18:25:21.622
 !MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+!SESSION 2022-05-16 12:27:48.684 -----------------------------------------------
+eclipse.buildId=4.6.1.M20160907-1200
+java.version=1.8.0_331
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_CO
+Framework arguments:  -product org.eclipse.epp.package.modeling.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.modeling.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2022-05-16 12:28:25.541
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Mafe Lopez'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.equinox.ds 1 0 2022-05-16 12:28:27.470
+!MESSAGE Could not bind a reference of component org.eclipse.fx.core.internal.JUtilLoggerFactory. The reference is: Reference[name = registerHandler, interface = java.util.logging.Handler, policy = dynamic, policy-option = greedy, cardinality = 0..n, target = null, bind = registerHandler, unbind = unregisterHandler, updated = null]
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2022-05-16 12:28:30.656
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 2.0.3.v20160905-1331
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:93)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:103)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY org.apache.log4j 4 0 2022-05-16 12:45:45.158
+!MESSAGE org.eclipse.fx.ide.css.ui.internal.CssDslActivator  - Failed to create injector for org.eclipse.fx.ide.css.CssDsl
+
+
+!ENTRY org.apache.log4j 4 0 2022-05-16 12:45:45.165
+!MESSAGE org.eclipse.fx.ide.css.ui.internal.CssDslActivator  - Guice creation errors:
+
+1) Error in custom provider, java.lang.NullPointerException: A null service reference is not allowed.
+  while locating org.eclipse.fx.ide.css.extapi.CssExt$OsgiCssExtServiceProvider
+  while locating org.eclipse.fx.ide.css.extapi.CssExt
+    for field at org.eclipse.fx.ide.css.validation.CssDslJavaValidator.ext(Unknown Source)
+  at org.eclipse.xtext.service.MethodBasedModule.configure(MethodBasedModule.java:57)
+  while locating org.eclipse.fx.ide.css.validation.CssDslJavaValidator
+
+1 error
+
+!STACK 0
+com.google.inject.CreationException: Guice creation errors:
+
+1) Error in custom provider, java.lang.NullPointerException: A null service reference is not allowed.
+  while locating org.eclipse.fx.ide.css.extapi.CssExt$OsgiCssExtServiceProvider
+  while locating org.eclipse.fx.ide.css.extapi.CssExt
+    for field at org.eclipse.fx.ide.css.validation.CssDslJavaValidator.ext(Unknown Source)
+  at org.eclipse.xtext.service.MethodBasedModule.configure(MethodBasedModule.java:57)
+  while locating org.eclipse.fx.ide.css.validation.CssDslJavaValidator
+
+1 error
+	at com.google.inject.internal.Errors.throwCreationExceptionIfErrorsExist(Errors.java:435)
+	at com.google.inject.internal.InternalInjectorCreator.injectDynamically(InternalInjectorCreator.java:183)
+	at com.google.inject.internal.InternalInjectorCreator.build(InternalInjectorCreator.java:109)
+	at com.google.inject.Guice.createInjector(Guice.java:95)
+	at com.google.inject.Guice.createInjector(Guice.java:72)
+	at com.google.inject.Guice.createInjector(Guice.java:62)
+	at org.eclipse.fx.ide.css.ui.internal.CssDslActivator.createInjector(CssDslActivator.java:67)
+	at org.eclipse.fx.ide.css.ui.internal.CssDslActivator.getInjector(CssDslActivator.java:55)
+	at org.eclipse.fx.ide.css.ui.CssDslExecutableExtensionFactory.getInjector(CssDslExecutableExtensionFactory.java:26)
+	at org.eclipse.xtext.ui.guice.AbstractGuiceAwareExecutableExtensionFactory.create(AbstractGuiceAwareExecutableExtensionFactory.java:51)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:262)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.xtext.internal.ResourceServiceProviderDescriptor.getExtension(ResourceServiceProviderDescriptor.java:46)
+	at org.eclipse.xtext.internal.AbstractResourceServiceProviderDescriptor.get(AbstractResourceServiceProviderDescriptor.java:20)
+	at org.eclipse.xtext.resource.impl.ResourceServiceProviderRegistryImpl$InternalData.getServiceProvider(ResourceServiceProviderRegistryImpl.java:46)
+	at org.eclipse.xtext.resource.impl.ResourceServiceProviderRegistryImpl.getResourceServiceProvider(ResourceServiceProviderRegistryImpl.java:109)
+	at org.eclipse.xtext.resource.impl.ResourceServiceProviderRegistryImpl.getResourceServiceProvider(ResourceServiceProviderRegistryImpl.java:129)
+	at org.eclipse.xtext.ui.resource.UriValidator.isValid(UriValidator.java:27)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl$1.getURI(Storage2UriMapperJavaImpl.java:320)
+	at org.eclipse.xtext.ui.resource.SourceAttachmentPackageFragmentRootWalker.handle(SourceAttachmentPackageFragmentRootWalker.java:279)
+	at org.eclipse.xtext.ui.resource.PackageFragmentRootWalker.traverse(PackageFragmentRootWalker.java:107)
+	at org.eclipse.xtext.ui.resource.PackageFragmentRootWalker.traverse(PackageFragmentRootWalker.java:95)
+	at org.eclipse.xtext.ui.resource.PackageFragmentRootWalker.traverse(PackageFragmentRootWalker.java:65)
+	at org.eclipse.xtext.ui.resource.SourceAttachmentPackageFragmentRootWalker.traverse(SourceAttachmentPackageFragmentRootWalker.java:168)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl.initializeData(Storage2UriMapperJavaImpl.java:333)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl.getCachedData(Storage2UriMapperJavaImpl.java:253)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl.updateCache(Storage2UriMapperJavaImpl.java:468)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl.access$6(Storage2UriMapperJavaImpl.java:461)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl$4.run(Storage2UriMapperJavaImpl.java:657)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl.doInitializeCache(Storage2UriMapperJavaImpl.java:669)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl.access$2(Storage2UriMapperJavaImpl.java:648)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl$3.run(Storage2UriMapperJavaImpl.java:637)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException: A null service reference is not allowed.
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.getService(BundleContextImpl.java:617)
+	at org.eclipse.fx.ide.css.extapi.CssExt$OsgiCssExtServiceProvider.get(CssExt.java:48)
+	at org.eclipse.fx.ide.css.extapi.CssExt$OsgiCssExtServiceProvider.get(CssExt.java:1)
+	at com.google.inject.internal.BoundProviderFactory.get(BoundProviderFactory.java:55)
+	at com.google.inject.internal.SingleFieldInjector.inject(SingleFieldInjector.java:53)
+	at com.google.inject.internal.MembersInjectorImpl.injectMembers(MembersInjectorImpl.java:110)
+	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:94)
+	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:254)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter$1.call(ProviderToInternalFactoryAdapter.java:46)
+	at com.google.inject.internal.InjectorImpl.callInContext(InjectorImpl.java:1031)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
+	at com.google.inject.Scopes$1$1.get(Scopes.java:65)
+	at com.google.inject.internal.InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:40)
+	at com.google.inject.internal.InternalInjectorCreator$1.call(InternalInjectorCreator.java:204)
+	at com.google.inject.internal.InternalInjectorCreator$1.call(InternalInjectorCreator.java:198)
+	at com.google.inject.internal.InjectorImpl.callInContext(InjectorImpl.java:1024)
+	at com.google.inject.internal.InternalInjectorCreator.loadEagerSingletons(InternalInjectorCreator.java:198)
+	at com.google.inject.internal.InternalInjectorCreator.injectDynamically(InternalInjectorCreator.java:179)
+	... 33 more
+
+!ENTRY org.apache.log4j 4 0 2022-05-16 12:45:45.166
+!MESSAGE org.eclipse.fx.ide.css.ui.CssDslExecutableExtensionFactory  - Failed to create injector for org.eclipse.fx.ide.css.CssDsl
+
+!STACK 0
+java.lang.RuntimeException: Failed to create injector for org.eclipse.fx.ide.css.CssDsl
+	at org.eclipse.fx.ide.css.ui.internal.CssDslActivator.createInjector(CssDslActivator.java:71)
+	at org.eclipse.fx.ide.css.ui.internal.CssDslActivator.getInjector(CssDslActivator.java:55)
+	at org.eclipse.fx.ide.css.ui.CssDslExecutableExtensionFactory.getInjector(CssDslExecutableExtensionFactory.java:26)
+	at org.eclipse.xtext.ui.guice.AbstractGuiceAwareExecutableExtensionFactory.create(AbstractGuiceAwareExecutableExtensionFactory.java:51)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:262)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.xtext.internal.ResourceServiceProviderDescriptor.getExtension(ResourceServiceProviderDescriptor.java:46)
+	at org.eclipse.xtext.internal.AbstractResourceServiceProviderDescriptor.get(AbstractResourceServiceProviderDescriptor.java:20)
+	at org.eclipse.xtext.resource.impl.ResourceServiceProviderRegistryImpl$InternalData.getServiceProvider(ResourceServiceProviderRegistryImpl.java:46)
+	at org.eclipse.xtext.resource.impl.ResourceServiceProviderRegistryImpl.getResourceServiceProvider(ResourceServiceProviderRegistryImpl.java:109)
+	at org.eclipse.xtext.resource.impl.ResourceServiceProviderRegistryImpl.getResourceServiceProvider(ResourceServiceProviderRegistryImpl.java:129)
+	at org.eclipse.xtext.ui.resource.UriValidator.isValid(UriValidator.java:27)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl$1.getURI(Storage2UriMapperJavaImpl.java:320)
+	at org.eclipse.xtext.ui.resource.SourceAttachmentPackageFragmentRootWalker.handle(SourceAttachmentPackageFragmentRootWalker.java:279)
+	at org.eclipse.xtext.ui.resource.PackageFragmentRootWalker.traverse(PackageFragmentRootWalker.java:107)
+	at org.eclipse.xtext.ui.resource.PackageFragmentRootWalker.traverse(PackageFragmentRootWalker.java:95)
+	at org.eclipse.xtext.ui.resource.PackageFragmentRootWalker.traverse(PackageFragmentRootWalker.java:65)
+	at org.eclipse.xtext.ui.resource.SourceAttachmentPackageFragmentRootWalker.traverse(SourceAttachmentPackageFragmentRootWalker.java:168)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl.initializeData(Storage2UriMapperJavaImpl.java:333)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl.getCachedData(Storage2UriMapperJavaImpl.java:253)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl.updateCache(Storage2UriMapperJavaImpl.java:468)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl.access$6(Storage2UriMapperJavaImpl.java:461)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl$4.run(Storage2UriMapperJavaImpl.java:657)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl.doInitializeCache(Storage2UriMapperJavaImpl.java:669)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl.access$2(Storage2UriMapperJavaImpl.java:648)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl$3.run(Storage2UriMapperJavaImpl.java:637)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: com.google.inject.CreationException: Guice creation errors:
+
+1) Error in custom provider, java.lang.NullPointerException: A null service reference is not allowed.
+  while locating org.eclipse.fx.ide.css.extapi.CssExt$OsgiCssExtServiceProvider
+  while locating org.eclipse.fx.ide.css.extapi.CssExt
+    for field at org.eclipse.fx.ide.css.validation.CssDslJavaValidator.ext(Unknown Source)
+  at org.eclipse.xtext.service.MethodBasedModule.configure(MethodBasedModule.java:57)
+  while locating org.eclipse.fx.ide.css.validation.CssDslJavaValidator
+
+1 error
+	at com.google.inject.internal.Errors.throwCreationExceptionIfErrorsExist(Errors.java:435)
+	at com.google.inject.internal.InternalInjectorCreator.injectDynamically(InternalInjectorCreator.java:183)
+	at com.google.inject.internal.InternalInjectorCreator.build(InternalInjectorCreator.java:109)
+	at com.google.inject.Guice.createInjector(Guice.java:95)
+	at com.google.inject.Guice.createInjector(Guice.java:72)
+	at com.google.inject.Guice.createInjector(Guice.java:62)
+	at org.eclipse.fx.ide.css.ui.internal.CssDslActivator.createInjector(CssDslActivator.java:67)
+	... 28 more
+Caused by: java.lang.NullPointerException: A null service reference is not allowed.
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.getService(BundleContextImpl.java:617)
+	at org.eclipse.fx.ide.css.extapi.CssExt$OsgiCssExtServiceProvider.get(CssExt.java:48)
+	at org.eclipse.fx.ide.css.extapi.CssExt$OsgiCssExtServiceProvider.get(CssExt.java:1)
+	at com.google.inject.internal.BoundProviderFactory.get(BoundProviderFactory.java:55)
+	at com.google.inject.internal.SingleFieldInjector.inject(SingleFieldInjector.java:53)
+	at com.google.inject.internal.MembersInjectorImpl.injectMembers(MembersInjectorImpl.java:110)
+	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:94)
+	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:254)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter$1.call(ProviderToInternalFactoryAdapter.java:46)
+	at com.google.inject.internal.InjectorImpl.callInContext(InjectorImpl.java:1031)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
+	at com.google.inject.Scopes$1$1.get(Scopes.java:65)
+	at com.google.inject.internal.InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:40)
+	at com.google.inject.internal.InternalInjectorCreator$1.call(InternalInjectorCreator.java:204)
+	at com.google.inject.internal.InternalInjectorCreator$1.call(InternalInjectorCreator.java:198)
+	at com.google.inject.internal.InjectorImpl.callInContext(InjectorImpl.java:1024)
+	at com.google.inject.internal.InternalInjectorCreator.loadEagerSingletons(InternalInjectorCreator.java:198)
+	at com.google.inject.internal.InternalInjectorCreator.injectDynamically(InternalInjectorCreator.java:179)
+	... 33 more
+
+!ENTRY org.apache.log4j 4 0 2022-05-16 12:45:45.168
+!MESSAGE org.eclipse.xtext.resource.impl.ResourceServiceProviderRegistryImpl  - Errorneous resource service provider registered for 'archive:file:/C:/Program%20Files/Java/jre1.8.0_331/lib/resources.jar!/javax/swing/text/html/default.css'. Removing it from the registry.
+
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.fx.ide.css.ui.CssDslExecutableExtensionFactory.getBundle(CssDslExecutableExtensionFactory.java:21)
+	at org.eclipse.xtext.ui.guice.AbstractGuiceAwareExecutableExtensionFactory.create(AbstractGuiceAwareExecutableExtensionFactory.java:59)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:262)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.xtext.internal.ResourceServiceProviderDescriptor.getExtension(ResourceServiceProviderDescriptor.java:46)
+	at org.eclipse.xtext.internal.AbstractResourceServiceProviderDescriptor.get(AbstractResourceServiceProviderDescriptor.java:20)
+	at org.eclipse.xtext.resource.impl.ResourceServiceProviderRegistryImpl$InternalData.getServiceProvider(ResourceServiceProviderRegistryImpl.java:46)
+	at org.eclipse.xtext.resource.impl.ResourceServiceProviderRegistryImpl.getResourceServiceProvider(ResourceServiceProviderRegistryImpl.java:109)
+	at org.eclipse.xtext.resource.impl.ResourceServiceProviderRegistryImpl.getResourceServiceProvider(ResourceServiceProviderRegistryImpl.java:129)
+	at org.eclipse.xtext.ui.resource.UriValidator.isValid(UriValidator.java:27)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl$1.getURI(Storage2UriMapperJavaImpl.java:320)
+	at org.eclipse.xtext.ui.resource.SourceAttachmentPackageFragmentRootWalker.handle(SourceAttachmentPackageFragmentRootWalker.java:279)
+	at org.eclipse.xtext.ui.resource.PackageFragmentRootWalker.traverse(PackageFragmentRootWalker.java:107)
+	at org.eclipse.xtext.ui.resource.PackageFragmentRootWalker.traverse(PackageFragmentRootWalker.java:95)
+	at org.eclipse.xtext.ui.resource.PackageFragmentRootWalker.traverse(PackageFragmentRootWalker.java:65)
+	at org.eclipse.xtext.ui.resource.SourceAttachmentPackageFragmentRootWalker.traverse(SourceAttachmentPackageFragmentRootWalker.java:168)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl.initializeData(Storage2UriMapperJavaImpl.java:333)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl.getCachedData(Storage2UriMapperJavaImpl.java:253)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl.updateCache(Storage2UriMapperJavaImpl.java:468)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl.access$6(Storage2UriMapperJavaImpl.java:461)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl$4.run(Storage2UriMapperJavaImpl.java:657)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl.doInitializeCache(Storage2UriMapperJavaImpl.java:669)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl.access$2(Storage2UriMapperJavaImpl.java:648)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl$3.run(Storage2UriMapperJavaImpl.java:637)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.core.resources 2 10035 2022-05-16 12:45:45.845
+!MESSAGE The workspace will exit with unsaved changes in this session.
