@@ -68,17 +68,6 @@ public class Supermarket {
         this.box3 = box3;
     }
 
-    @Override
-    public String toString() {
-        return "Supermarket{" +
-                "amountShoppingCarts=" + amountShoppingCarts +
-                ", clients=" + clients +
-                ", box1=" + box1 +
-                ", box2=" + box2 +
-                ", box3=" + box3 +
-                '}';
-    }
-
 
 
     public void addClients(){
