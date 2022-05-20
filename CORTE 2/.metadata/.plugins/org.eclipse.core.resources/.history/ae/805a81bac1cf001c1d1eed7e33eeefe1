@@ -1,6 +1,0 @@
-package co.edu.cue.ed.generics.model;
-
-public class ProductoDestacado extends Ejm1Producto {
-
-	
-}

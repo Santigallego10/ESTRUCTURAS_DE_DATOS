@@ -16,15 +16,28 @@ public class Main {
         List<Integer> listOfValuesA = new ArrayList<>();
         List<Integer> listOfValuesB= new ArrayList<>();
 
-        B.add(8); B.add(4); B.add(9); B.add(4);
-        A.add(3); A.add(5); A.add(8); A.add(2);
+        //B.add(8); B.add(4); B.add(9); B.add(4);
+        //A.add(3); A.add(5); A.add(8); A.add(2);
 
+        int aleatorio= 0;
+        int n=5;
 
+        for (int i = 0; i < n; i++) {
+            aleatorio=(int) (Math.random()*10+1);
+            A.add(aleatorio);
+        }
+
+        for (int i =  0; i < n; i++) {
+            aleatorio= (int)(Math. random()*10+1);
+            B.add(aleatorio);
+        }
+
+        
         System.out.println("Elements A: "+A);
         System.out.println("Elements B: "+B);
 
         //if (!A.isEmpty() && !B.isEmpty()) {
-            for (int i = 0; i < B.size()+3; i++) {
+            for (int i = 0; i < B.size()+4; i++) {
 
                 Integer firstElementA= A.peek();
                 A.remove();
@@ -33,13 +46,11 @@ public class Main {
                 if (firstElementA > firstElementB){
                     listOf1A.add(1);
                     listOfValuesA.add(firstElementA);
-                    //A.remove();
                 } else if (firstElementB>firstElementA){
                     listOf2B.add(2);
                     listOfValuesB.add(firstElementB);
                 } else {
                     listOfSameElements0.add(0);
-                    //A.remove();
                 }
                 }
 
