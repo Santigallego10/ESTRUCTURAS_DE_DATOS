@@ -67,8 +67,7 @@ public class Supermarket {
     public void setBox3(Queue<Client> box3) {
         this.box3 = box3;
     }
-
-
+    
 
     public void addClients(){
         Client client= new Client();

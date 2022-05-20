@@ -6,16 +6,10 @@ import java.util.Stack;
 public class Main {
     public static void main(String[] args) {
 
-        Stack<String> libros = new Stack<String>();
+        Libreria libreria= new Libreria();
 
-        libros.push("Matematicas");
-        libros.push("Ingles");
-        libros.push("Programacion");
-        libros.push("Matematicas");
-        libros.push("Matematicas");
-
-
-
-
+        libreria.organizeBooks();
+        libreria.seeNewBookList();
+        libreria.reverseList();
     }
 }
