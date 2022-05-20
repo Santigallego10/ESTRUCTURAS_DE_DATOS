@@ -161,16 +161,19 @@ public class Supermarket {
     }
 
 
+//        else if (q2.size() == q3.size()) {
+//            return 2;
+//        }
+//        return 3;
+
     public void fillQueues(){
-
         String id= JOptionPane.showInputDialog("Enter the client id: ");
-
         Client client= searchClient(id);
         if (client!=null) {
             if (box1.size()>0) {
                 if (box2.size()>0) {
                     if (box3.size()>0) {
-                        if (box1.size() < box2.size() && box1.size() < box3.size()) {
+                         if (box1.size() < box2.size() && box1.size() < box3.size()) {
                             box1.add(client);
                             clients.remove(client);
                             System.out.println("The client " + client.getName() + " is in the box 1");
@@ -182,7 +185,16 @@ public class Supermarket {
                             box3.add(client);
                             clients.remove(client);
                             System.out.println("The client " + client.getName() + " is in the box 3");
-                        }
+                        } else if (box1.size() == box2.size()) {
+                             box1.add(client);
+                             System.out.println("The client " + client.getName() + " is in the box 1");
+                         } else if (box2.size()==box3.size()) {
+                             box2.add(client);
+                             System.out.println("The client " + client.getName() + " is in the box 2");
+                         } else if (box3.size()==box1.size()) {
+                             box3.add(client);
+                             System.out.println("The client " + client.getName() + " is in the box 3");
+                         }
                     }else if (box3.size() == 0) {
                         System.out.println("The box 3 dont have people, you can choice this "+ client.getName());
                         box3.add(client);
@@ -234,7 +246,7 @@ public class Supermarket {
                 }
             }
         }
-        return clientExist;
+        return clientExist ;
     }
 
 }
