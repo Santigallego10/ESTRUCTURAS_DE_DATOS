@@ -16,6 +16,7 @@ public class Main {
         cleanBag.addProduct(new Clean("Clorox", 16.000, "hypochlorite", 4.0));
         cleanBag.addProduct(new Clean("Floor wax", 17.000, "Wax", 3.0));
 
+
         DairyBag.addProduct(new Dairy ("Cheese", 3.200, 100, 10));
         DairyBag.addProduct(new Dairy ("Milk", 4.500, 25, 8));
         DairyBag.addProduct(new Dairy ("Yogurt", 5.000, 15, 72));

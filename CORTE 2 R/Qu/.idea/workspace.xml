@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9321864c-8e26-42aa-9cc7-5405ccf6bf7e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Genericpt2/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Junit/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Junit/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Junit/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Junit/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Junit/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Junit/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Junit/src/main/java/org/mhurtado/junit5app/model/Cuenta.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Junit/src/test/java/org/mhurtado/junit5app/model/CuentaTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Qu.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Colas/Anuncio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Colas/PrincipalAnuncio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ex1/Ex1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ex2/PrincipalCola.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ex2/queue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ex3/Colas3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Supermarket/Clients.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Supermarket/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Supermarket/Super.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Genericpt2/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Genericpt2/src/Main.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="29Iark3vFwY6qj050Qo537xXBIe" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager" selected="Application.Colas3">
+    <configuration name="Colas3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Ex3.Colas3" />
+      <module name="Qu" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Ex3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Ex1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Ex1.Ex1" />
+      <module name="Qu" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Ex1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PrincipalAnuncio" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Colas.PrincipalAnuncio" />
+      <module name="Qu" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Colas.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PrincipalCola" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Ex2.PrincipalCola" />
+      <module name="Qu" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Ex2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Colas3" />
+        <item itemvalue="Application.PrincipalCola" />
+        <item itemvalue="Application.PrincipalAnuncio" />
+        <item itemvalue="Application.Ex1" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9321864c-8e26-42aa-9cc7-5405ccf6bf7e" name="Changes" comment="" />
+      <created>1652803264209</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1652803264209</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
