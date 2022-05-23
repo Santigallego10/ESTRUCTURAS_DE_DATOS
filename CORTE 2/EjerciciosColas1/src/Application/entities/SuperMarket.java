@@ -1,9 +1,8 @@
 package Application.entities;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import Application.CashThreads;
+
+import java.util.*;
 
 public class SuperMarket {
 
@@ -34,6 +33,34 @@ public class SuperMarket {
         this.waitList.remove();
         this.shoppingCartAvailable--;
         return client;
+    }
+
+    public void addClient(Client c){
+        this.getWaitList().add(c);
+    }
+
+    public void findCash(Client c){
+        int min = this.cashRegisterList.get(0).getClientes().size();
+        CashRegister crMin = this.cashRegisterList.get(0);
+        for (CashRegister cr :this.cashRegisterList) {
+            if(cr.getClientes().size() < min){
+                crMin = cr;
+            }
+        }
+        crMin.getClientes().add(c);
+        System.out.println("El "+c.getName()+" fue asignado a la caja "+crMin.getId());
+        String cadena = "";
+        Iterator<Client> it = crMin.getClientes().iterator();
+        /*
+        while (it.hasNext()){
+            Client i = it.next();
+            cadena+= i.getName()+", ";
+        }
+
+         */
+        //System.out.println("----LISTA CAJA "+crMin.getId()+cadena+"----");
+        CashThreads cashThreads = new CashThreads(c, crMin,this);
+        cashThreads.start();
     }
 
     //GETTERS AND SETTERS

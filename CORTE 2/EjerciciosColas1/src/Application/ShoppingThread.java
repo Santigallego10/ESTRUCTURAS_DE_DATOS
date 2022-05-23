@@ -7,10 +7,13 @@ import java.util.Random;
 
 public class ShoppingThread extends Thread{
 
+    public SuperMarket sm;
+
     public Client client;
 
-    public ShoppingThread(Client client) {
+    public ShoppingThread(Client client, SuperMarket sm) {
         this.client = client;
+        this.sm = sm;
     }
 
     public void run(){
@@ -46,9 +49,10 @@ public class ShoppingThread extends Thread{
 
          */
 
-
-
+        this.sm.setShoppingCartAvailable(this.sm.getShoppingCartAvailable()+1);
         System.out.println("El  "+this.client.getName()+" termino de comprar en "+value+" seg");
+        this.sm.findCash(this.client);
+
     }
 
     public Client getClient() {
