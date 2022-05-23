@@ -11,7 +11,7 @@ public class Main {
         SuperMarket superMarket = new SuperMarket("Carulla",15);
 
         //Creating a specific amount of clients that will enter to the SuperMarket
-        int clients_amount = 15;
+        int clients_amount = 10;
 
         for (int i = 0; i < clients_amount; i++) {
             superMarket.getWaitList().add(new Client("Cliente "+(i+1)));
@@ -21,33 +21,9 @@ public class Main {
         while (superMarket.getShoppingCartAvailable() > 0 && !superMarket.getWaitList().isEmpty()){
             //return the client that is shopping
             for (int i = 0; i < clients_amount; i++) {
-                ShoppingThread sp = new ShoppingThread(superMarket.giveCar());
+                ShoppingThread sp = new ShoppingThread(superMarket.giveCar(), superMarket);
                 sp.start();
             }
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }

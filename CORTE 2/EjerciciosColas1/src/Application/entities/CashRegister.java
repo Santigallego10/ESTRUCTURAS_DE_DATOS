@@ -13,7 +13,7 @@ public class CashRegister {
 
     public CashRegister(int id) {
         this.id = id;
-        this.clientes = new LinkedList<>();
+        this.clientes = new LinkedList<Client>();
     }
 
     public int getId() {

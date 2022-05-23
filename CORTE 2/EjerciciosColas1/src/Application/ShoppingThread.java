@@ -11,15 +11,18 @@ public class ShoppingThread extends Thread{
 
     public Client client;
 
-    public ShoppingThread(Client client) {
+    private SuperMarket sm;
+
+    public ShoppingThread(Client client, SuperMarket sm) {
         this.client = client;
+        this.sm = sm;
     }
 
-    public void run(SuperMarket sm){
-        waitXSeconds(sm);
+    public void run(){
+        waitXSeconds();
     }
 
-    private void waitXSeconds(SuperMarket sm) {
+    private void waitXSeconds() {
 
         int min = 1;
         int max = 5;
@@ -33,14 +36,25 @@ public class ShoppingThread extends Thread{
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println("finished "+this.client.getName());
-        List<CashRegister> listC = sm.getCashRegisterList();
-        int mayor = listC.get(0).getClientes().size();
+        /*
+        List<CashRegister> listC = this.sm.getCashRegisterList();
+        int menor = listC.get(0).getClientes().size();
+        CashRegister mincash = null;
         for (CashRegister cr: listC) {
-            if(mayor < cr.getClientes().size()){
-                mayor = cr.getClientes().size();
+            if(menor > cr.getClientes().size()){
+                menor = cr.getClientes().size();
+                mincash = cr;
             }
         }
+        System.out.println("id "+mincash.getId());
+        mincash.getClientes().add(this.client);
+
+         */
+        this.sm.getCashRegisterList().get(0).getClientes().add(this.client);
+        System.out.println(this.sm.getCashRegisterList().get(0).getClientes());
+        System.out.println("finished "+this.client.getName());
+
+
 
     }
 
