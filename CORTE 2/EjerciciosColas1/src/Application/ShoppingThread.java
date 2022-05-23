@@ -47,7 +47,7 @@ public class ShoppingThread extends Thread{
 
 
 
-        System.out.println("finished "+this.client.getName());
+        System.out.println("El  "+this.client.getName()+" termino de comprar en "+value+" seg");
     }
 
     public Client getClient() {
