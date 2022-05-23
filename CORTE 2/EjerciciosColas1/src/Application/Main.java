@@ -9,7 +9,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) throws InterruptedException {
 
-        SuperMarket superMarket = new SuperMarket("Carulla",15);
+        SuperMarket superMarket = new SuperMarket("Carulla",20);
 
         //Creating a specific amount of clients that will enter to the SuperMarket
         int clients_amount = 25;
@@ -22,12 +22,12 @@ public class Main {
 
         while (superMarket.getShoppingCartAvailable() > 0 && !superMarket.getWaitList().isEmpty()){
             for (int i = 0; i < clients_amount; i++) {
-                Client client = superMarket.giveCar();
-                ShoppingThread sp = new ShoppingThread(client);
-                sp.start();
+                if(superMarket.getShoppingCartAvailable()>0 && !superMarket.getWaitList().isEmpty()){
+                    Client client = superMarket.giveCar();
+                    ShoppingThread sp = new ShoppingThread(client);
+                    sp.start();
+                }
             }
         }
-
-
     }
 }

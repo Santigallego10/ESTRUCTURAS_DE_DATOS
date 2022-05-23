@@ -1,6 +1,7 @@
 package Application;
 
 import Application.entities.Client;
+import Application.entities.SuperMarket;
 
 import java.util.Random;
 
@@ -57,4 +58,5 @@ public class ShoppingThread extends Thread{
     public void setClient(Client client) {
         this.client = client;
     }
+
 }
