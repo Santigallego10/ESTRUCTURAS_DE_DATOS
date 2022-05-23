@@ -24,6 +24,9 @@ public class ProductosInventario {
         System.out.println("Popped element "+stack.pop());
         System.out.println("Popped element "+stack.pop());
 
+        System.out.println("Initial stack "+stack);
+
+
 
 
 
