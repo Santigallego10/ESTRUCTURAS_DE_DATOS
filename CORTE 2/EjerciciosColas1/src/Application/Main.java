@@ -3,8 +3,6 @@ package Application;
 import Application.entities.Client;
 import Application.entities.SuperMarket;
 
-import java.util.Random;
-
 public class Main {
     public static void main(String[] args) throws InterruptedException {
 
@@ -18,10 +16,12 @@ public class Main {
         }
 
         System.out.println("SuperMercado Abierto!");
+
         while (superMarket.getShoppingCartAvailable() > 0 && !superMarket.getWaitList().isEmpty()){
             //return the client that is shopping
             for (int i = 0; i < clients_amount; i++) {
-                ShoppingThread sp = new ShoppingThread(superMarket.giveCar(), superMarket);
+                Client client = superMarket.giveCar();
+                ShoppingThread sp = new ShoppingThread(client);
                 sp.start();
             }
         }

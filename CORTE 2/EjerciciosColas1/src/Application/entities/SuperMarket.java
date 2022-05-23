@@ -36,10 +36,6 @@ public class SuperMarket {
         return client;
     }
 
-
-
-
-
     //GETTERS AND SETTERS
 
 

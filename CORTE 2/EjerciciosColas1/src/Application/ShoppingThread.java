@@ -1,21 +1,15 @@
 package Application;
 
-import Application.entities.CashRegister;
 import Application.entities.Client;
-import Application.entities.SuperMarket;
 
-import java.util.List;
 import java.util.Random;
 
 public class ShoppingThread extends Thread{
 
     public Client client;
 
-    private SuperMarket sm;
-
-    public ShoppingThread(Client client, SuperMarket sm) {
+    public ShoppingThread(Client client) {
         this.client = client;
-        this.sm = sm;
     }
 
     public void run(){
@@ -50,12 +44,10 @@ public class ShoppingThread extends Thread{
         mincash.getClientes().add(this.client);
 
          */
-        this.sm.getCashRegisterList().get(0).getClientes().add(this.client);
-        System.out.println(this.sm.getCashRegisterList().get(0).getClientes());
+
+
+
         System.out.println("finished "+this.client.getName());
-
-
-
     }
 
     public Client getClient() {
