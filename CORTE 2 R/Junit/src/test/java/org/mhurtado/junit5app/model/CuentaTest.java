@@ -5,8 +5,11 @@ import org.junit.jupiter.api.condition.*;
 import org.mhurtado.junit5app.exception.DineroInsuficienteException;
 
 import java.math.BigDecimal;
+import java.util.Map;
+import java.util.Properties;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assumptions.*;
 
 
 
@@ -164,4 +167,91 @@ class CuentaTest {
     @EnabledOnJre(JRE.JAVA_8)
     void soloJdk8() {
     }
+
+    @Test
+    @DisabledOnJre(JRE.JAVA_15)
+    void jdr() {
+    }
+
+    @Test
+    void imprimirSystemProperties() {
+        Properties properties = System.getProperties();
+        properties.forEach((k,v)-> System.out.println(k+":"+v));
+
+    }
+
+    @Test
+    @DisabledIfSystemProperty(named = "os.arch", matches = ".*32.*")
+    void testSolo64() {
+    }
+
+    @Test
+    @EnabledIfSystemProperty(named = "os.arch", matches = ".*32.*")
+    void testNo64() {
+    }
+
+    @Test
+    @EnabledIfSystemProperty(named = "user.name", matches = "mafeh")
+    void testUsername() {
+    }
+
+    @Test
+    @EnabledIfSystemProperty(named = "ENV", matches = "dev")
+    void testDev() {
+    }
+
+    @Test
+    void imprimirVariablesDeAmbiente() {
+       Map<String, String> getenv= System.getenv();
+       getenv.forEach((k,v)-> System.out.println(k +" = " +v));
+    }
+
+
+    @Test
+    @EnabledIfEnvironmentVariable(named = "JAVA_HOME", matches = ".*jdk-14.0.2.*")
+    void testJavaHome() {
+    }
+
+    @Test
+    @EnabledIfEnvironmentVariable(named = "NUMBER_OF_PROCESSORS", matches = "8")
+    void testProcesadores() {
+    }
+
+    @Test
+    @EnabledIfEnvironmentVariable(named = "ENVIROMENT", matches = "dev")
+    void testEnv() {
+    }
+
+    @Test
+    @DisabledIfEnvironmentVariable(named = "ENVIROMENT", matches = "prod")
+    void testEnvProdDisabled() {
+
+    }
+
+
+    @Test
+
+    void TestBalanceCuentaDev() {
+        boolean esDev = "dev".equals(System.getProperty("ENV"));
+        assumeTrue(esDev);//si se cumple, se ejecuta lo que le sigue.
+        assertNotNull(cuenta.getBalance());
+        assertEquals(1000.12345, cuenta.getBalance().doubleValue());
+        assertFalse(cuenta.getBalance().compareTo(BigDecimal.ZERO) < 0);
+        assertTrue(cuenta.getBalance().compareTo(BigDecimal.ZERO) > 0);
+    }
+
+
+
+    @Test
+
+    void TestBalanceCuentaDev2() {
+        boolean esDev = "dev".equals(System.getProperty("ENV"));
+        assumingThat(esDev,()->{
+            assertNotNull(cuenta.getBalance());
+            assertEquals(1000.12345, cuenta.getBalance().doubleValue());
+        });//si se cumple, se ejecuta lo que le sigue.
+        assertFalse(cuenta.getBalance().compareTo(BigDecimal.ZERO) < 0);
+        assertTrue(cuenta.getBalance().compareTo(BigDecimal.ZERO) > 0);
+    }
+
 }
