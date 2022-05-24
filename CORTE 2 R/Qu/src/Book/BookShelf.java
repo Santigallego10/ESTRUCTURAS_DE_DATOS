@@ -6,7 +6,6 @@ import java.util.Stack;
 
 public class BookShelf {
 
-
         static Stack<Book>booksList = new Stack<>();
         static List<Book> codificationList = new ArrayList<>();
         static List<Book>terrorList = new ArrayList<>();
