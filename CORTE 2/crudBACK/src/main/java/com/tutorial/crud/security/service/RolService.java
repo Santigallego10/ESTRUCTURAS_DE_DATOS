@@ -19,4 +19,8 @@ public class RolService {
     public Optional<Rol> getByRolNombre(RolName rolName){
         return rolRepository.findByRolNombre(rolName);
     }
+
+    public void Save( Rol rol){
+        rolRepository.save(rol);
+    }
 }
