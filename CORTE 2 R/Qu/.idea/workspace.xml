@@ -5,14 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9321864c-8e26-42aa-9cc7-5405ccf6bf7e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Junit/src/main/java/org/mhurtado/junit5app/exception/DineroInsuficienteException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Junit/src/main/java/org/mhurtado/junit5app/model/Banco.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Junit/src/main/java/org/mhurtado/junit5app/model/Cuenta.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Junit/src/main/java/org/mhurtado/junit5app/model/Cuenta.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Generics/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Generics/src/Auction/Auction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Generics/src/Auction/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Generics/src/Auction/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Generics/src/Ex1/EjemplosGenericos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Generics/src/Ex1/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Generics/src/Ex2/EjemplosGenericos2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Generics/src/Ex2/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Generics/src/Ex3/Box.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Generics/src/Ex4/EjemplosGenericos4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Generics/src/Ex3/GenericClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Generics/src/Ejercicio4/GenericClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Generics/src/Ex3/Info.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Generics/src/Ejercicio4/Info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Generics/src/Ex3/Types.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Generics/src/Ejercicio4/Types.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Junit/src/test/java/org/mhurtado/junit5app/model/CuentaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Junit/src/test/java/org/mhurtado/junit5app/model/CuentaTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Junit/target/classes/org/mhurtado/junit5app/model/Cuenta.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Junit/target/classes/org/mhurtado/junit5app/model/Cuenta.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Junit/target/test-classes/org/mhurtado/junit5app/model/CuentaTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Junit/target/test-classes/org/mhurtado/junit5app/model/CuentaTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Supermarket/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Supermarket/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Supermarket/Super.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Supermarket/Super.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

@@ -19,9 +19,10 @@ public class Super {
     }
 
     public void getACart(){
-        if(this.amountOfCarts==0){
+        if(this.amountOfCarts==0) {
             System.out.println("There is no carts");
-            
+        }else{
+
         }
     }
 

@@ -1,4 +1,4 @@
-package Ex3;
+package Ejercicio4;
 
 public class Info {
     private int code;
