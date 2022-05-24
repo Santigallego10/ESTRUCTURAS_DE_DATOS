@@ -23,7 +23,9 @@ public class JwtProvider {
     public String generateToken(Authentication authentication){
         MainUser usuarioPrincipal = (MainUser) authentication.getPrincipal();
 
-        return Jwts.builder().setSubject(usuarioPrincipal.getUserName()).setExpiration(new Date(new Date().getTime() + expiration*1000))
+        return Jwts.builder().setSubject(usuarioPrincipal.getUserName())
+                .setIssuedAt(new Date())
+                .setExpiration(new Date(new Date().getTime() + expiration*1000))
                 .signWith(SignatureAlgorithm.HS512, secret)
                 .compact();
     }
