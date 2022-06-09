@@ -13,7 +13,7 @@ public class EjemploGenerico5Parecido {
         System.out.println("carros");
         imprimirCarros(carroLista);
 
-        List<CarroDestacado> listaCarrosDestacado = fromArrayToList(new CarroDestacado[]{new CarroDestacado("BMW",50000,69000,"vendido")});
+        List<CarroEjemplo1Parecido> listaCarrosDestacado = fromArrayToList(new CarroEjemplo1Parecido[]{new CarroEjemplo1Parecido("BMW",50000,69000.0,"vendido")});
         System.out.println("Carros destacados");
         imprimirCarros(listaCarrosDestacado);
 
